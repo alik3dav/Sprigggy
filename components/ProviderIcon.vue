@@ -13,6 +13,8 @@ const iconSrc = computed(() => {
       return '/icons/dropbox.png';
     case 'mega':
       return '/icons/mega.png';
+    case 'workupload':
+      return '/icons/workupload.png';
     default:
       return '/icons/download.png'; // fallback icon
   }
