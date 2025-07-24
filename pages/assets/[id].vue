@@ -75,6 +75,7 @@ const handleDownload = async () => {
             :src="asset.image"
             :alt="asset.title"
             class="w-full h-86 object-cover rounded"
+            loading="lazy"
           />
         </div>
 
