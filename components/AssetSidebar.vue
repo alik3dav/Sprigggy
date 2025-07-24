@@ -1,9 +1,9 @@
 <script setup>
-import { ref, onMounted, watch } from 'vue'
+import { ref, watch } from 'vue'
 import { useSupabaseClient } from '#imports'
-import { useRoute } from 'vue-router'
 
 const supabase = useSupabaseClient()
+
 const props = defineProps({
   currentAssetId: Number,
   tags: Array,
@@ -13,7 +13,7 @@ const props = defineProps({
 const relatedAssets = ref([])
 
 async function fetchRelated() {
-  if (!props.tags?.length && !props.type) {
+  if ((!props.tags || props.tags.length === 0) && !props.type) {
     relatedAssets.value = []
     return
   }
@@ -24,7 +24,7 @@ async function fetchRelated() {
     .neq('id', props.currentAssetId)
     .limit(5)
 
-  if (props.tags?.length) {
+  if (props.tags && props.tags.length) {
     query = query.or(
       props.tags
         .map(tag => `tags.cs.{${tag}}`)
@@ -56,17 +56,17 @@ watch(() => [props.tags, props.type], fetchRelated, { immediate: true })
       >
         <img
           :src="item.image"
-          alt="item.title"
+          :alt="item.title"
           class="w-12 h-12 object-cover rounded"
           loading="lazy"
         />
         <div>
-          <a
-            :href="`/asset/${item.id}`"
+          <NuxtLink
+            :to="`/assets/${item.id}`"
             class="font-medium text-blue-600 hover:underline"
           >
             {{ item.title }}
-          </a>
+          </NuxtLink>
           <div class="text-xs text-gray-500">
             {{ item.downloads?.toLocaleString() || 0 }} downloads
           </div>
