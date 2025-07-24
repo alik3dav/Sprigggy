@@ -139,7 +139,7 @@ watch(asset, (val) => {
 <template>
   <div class="max-w-6xl mx-auto p-4 space-y-8">
     <div
-      class="bg-white shadow-md rounded-lg p-8 grid grid-cols-1 lg:grid-cols-3 gap-10"
+      class="bg-slate-50 rounded-lg p-8 grid grid-cols-1 lg:grid-cols-3 gap-10"
     >
       <!-- Left Column: Image + Description -->
       <div class="lg:col-span-2 space-y-6">
@@ -159,7 +159,7 @@ watch(asset, (val) => {
         <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500">
           <span
             v-if="asset?.type"
-            class="inline-block bg-gray-100 rounded-full px-3 py-1 font-medium"
+            class="inline-block bg-slate-100 rounded-full px-3 py-1 font-medium"
           >
             {{ asset.type }}
           </span>
@@ -184,14 +184,14 @@ watch(asset, (val) => {
 
       <!-- Right Sidebar: Download, Info & Related -->
       <aside
-        class="lg:col-span-1 sticky top-18 self-start space-y-6 border rounded p-4 shadow-sm bg-gray-50"
+        class="lg:col-span-1 sticky top-18 self-start space-y-6 border border-slate-200  rounded-3xl p-4 "
       >
         <div>
           <a
             v-if="asset?.download_url"
             :href="asset.download_url"
             target="_blank"
-            class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded shadow transition"
+            class="flex items-center justify-center gap-2 bg-zinc-700 hover:bg-zinc-600 text-white font-semibold px-6 py-3 rounded-full shadow transition"
             rel="noopener noreferrer"
             @click.prevent="handleDownload"
           >

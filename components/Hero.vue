@@ -10,7 +10,7 @@
 
       <NuxtLink to="/collections" class="inline-block">
         <button
-          class="bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-sm sm:text-base font-semibold px-6 sm:px-8 py-2.5 rounded-lg shadow-md hover:brightness-110 transition"
+          class="bg-zinc-700 text-white text-sm sm:text-base font-semibold px-6 sm:px-8 py-2.5 rounded-full shadow-md hover:brightness-110 transition"
         >
           Browse Collections
         </button>

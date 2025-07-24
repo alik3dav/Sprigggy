@@ -49,14 +49,14 @@ const login = async () => {
 </script>
 
 <template>
-  <div class="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md mt-24">
+  <div class="max-w-md mx-auto p-6 mt-24">
     <h1 class="text-2xl font-bold mb-6 text-center">Login to Zippykit</h1>
 
     <input
       v-model="email"
       type="email"
       placeholder="Email"
-      class="w-full mb-4 p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+      class="w-full mb-4 px-6 py-3 bg-slate-50 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 transition"
       :disabled="loading"
       autocomplete="username"
     />
@@ -65,7 +65,7 @@ const login = async () => {
       v-model="password"
       type="password"
       placeholder="Password"
-      class="w-full mb-4 p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+      class="w-full mb-4 px-6 py-3 bg-slate-50 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 transition"
       :disabled="loading"
       autocomplete="current-password"
     />
@@ -73,7 +73,7 @@ const login = async () => {
     <button
       @click="login"
       :disabled="loading"
-      class="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
+      class="w-full bg-sky-800 text-white py-3 rounded-full hover:bg-sky-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
     >
       <span v-if="loading">Logging in...</span>
       <span v-else>Log In</span>

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white shadow rounded-lg overflow-hidden border flex flex-col">
+  <div class="bg-white border border-slate-200 rounded-lg overflow-hidden flex flex-col">
     <NuxtLink :to="link">
       <img :src="image" alt="" class="w-full h-50 object-cover" />
     </NuxtLink>
