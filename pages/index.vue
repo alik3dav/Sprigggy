@@ -1,11 +1,11 @@
 <template>
   <Hero />
-  <section class="max-w-6xl mx-auto p-4 space-y-8">
+  <section class="max-w-6xl mx-auto p-2 space-y-8">
     <h1 class="text-2xl font-bold mb-4">Recently Added Files</h1>
 
     <!-- Grid of cards -->
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
     >
       <AssetCard
         v-for="(item, i) in recent"

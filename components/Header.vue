@@ -14,8 +14,8 @@
       </NuxtLink>
 
       <!-- Center: Search (hidden on small) -->
-      <div class="hidden md:flex flex-1 justify-center px-4">
-        <SearchAssets class="w-full max-w-lg rounded shadow-sm border border-gray-300" />
+      <div class="hidden md:flex flex-1 justify-center">
+        <SearchAssets />
       </div>
 
       <!-- Right: Desktop Nav -->
@@ -56,7 +56,7 @@
       <!-- Mobile Toggle -->
       <button
         @click="toggleMobile"
-        class="md:hidden p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors"
+        class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors"
         aria-label="Toggle menu"
         :aria-expanded="mobileOpen.toString()"
       >
@@ -115,7 +115,7 @@
           @click="toggleMobile"
           >About</NuxtLink
         >
-        <SearchAssets class="w-full rounded border border-gray-300 shadow-sm" />
+        <SearchAssets class="w-full rounded-3xl " />
       </div>
     </transition>
   </header>
