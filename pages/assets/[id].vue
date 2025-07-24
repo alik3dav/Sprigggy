@@ -1,13 +1,14 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue';
+import { ref, onMounted, computed, watch } from 'vue';
 import { marked } from 'marked';
 import ProviderIcon from '~/components/ProviderIcon.vue';
 import { useRoute } from 'vue-router';
-import { useHead } from '#imports'
+import { useHead, useSupabaseClient } from '#imports'
 
 const supabase = useSupabaseClient();
 const route = useRoute();
 const asset = ref(null);
+const relatedAssets = ref([]);
 
 const formatDate = (input) => {
   if (!input) return '';
@@ -32,9 +33,39 @@ onMounted(async () => {
     .eq('id', route.params.id)
     .single();
 
-  if (error) console.error(error);
-  else asset.value = data;
+  if (error) {
+    console.error(error);
+  } else {
+    asset.value = data;
+    fetchRelatedAssets();
+  }
 });
+
+const fetchRelatedAssets = async () => {
+  if (!asset.value) return;
+  const tags = asset.value.tags || [];
+  if (tags.length === 0) {
+    relatedAssets.value = [];
+    return;
+  }
+
+  // Build OR query for tags.cs.{tag}
+  // Supabase doesn't allow simple 'in' for array contains so using 'or' with cs (contains)
+  const orQuery = tags.map(tag => `tags.cs.{${tag}}`).join(',');
+
+  const { data, error } = await supabase
+    .from('assets')
+    .select('id, title, image, downloads')
+    .neq('id', asset.value.id)
+    .or(orQuery)
+    .limit(5);
+
+  if (error) {
+    console.error('Error fetching related assets:', error);
+  } else {
+    relatedAssets.value = data;
+  }
+};
 
 const handleDownload = async () => {
   if (!asset.value?.id || !asset.value?.download_url) return;
@@ -62,7 +93,6 @@ const handleDownload = async () => {
     console.error('Download error:', error);
   }
 };
-
 
 // Watch for asset to load, then set SEO tags
 watch(asset, (val) => {
@@ -152,7 +182,7 @@ watch(asset, (val) => {
         />
       </div>
 
-      <!-- Right Sidebar: Download and Info -->
+      <!-- Right Sidebar: Download, Info & Related -->
       <aside
         class="lg:col-span-1 sticky top-18 self-start space-y-6 border rounded p-4 shadow-sm bg-gray-50"
       >
@@ -177,6 +207,37 @@ watch(asset, (val) => {
             {{ asset?.downloads?.toLocaleString() || 0 }}
           </p>
         </div>
+
+        <!-- Related Assets Section -->
+        <section class="mt-6">
+          <h2 class="text-lg font-semibold mb-3">Related Assets</h2>
+          <div v-if="relatedAssets.length" class="space-y-3">
+            <div
+              v-for="item in relatedAssets"
+              :key="item.id"
+              class="flex items-center gap-3 hover:bg-gray-100 p-2 rounded cursor-pointer"
+            >
+              <img
+                :src="item.image"
+                alt="item.title"
+                class="w-12 h-12 object-cover rounded"
+                loading="lazy"
+              />
+              <div>
+                <a
+                  :href="`/asset/${item.id}`"
+                  class="font-medium text-blue-600 hover:underline"
+                >
+                  {{ item.title }}
+                </a>
+                <div class="text-xs text-gray-500">
+                  {{ item.downloads?.toLocaleString() || 0 }} downloads
+                </div>
+              </div>
+            </div>
+          </div>
+          <p v-else class="text-gray-500 text-sm">No related assets found.</p>
+        </section>
       </aside>
     </div>
   </div>

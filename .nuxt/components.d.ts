@@ -14,6 +14,7 @@ type LazyComponent<T> = (T & DefineComponent<HydrationStrategies, {}, {}, {}, {}
 interface _GlobalComponents {
       'AssetCard': typeof import("../components/AssetCard.vue")['default']
     'AssetForm': typeof import("../components/AssetForm.vue")['default']
+    'AssetSidebar': typeof import("../components/AssetSidebar.vue")['default']
     'AssetTable': typeof import("../components/AssetTable.vue")['default']
     'Footer': typeof import("../components/Footer.vue")['default']
     'Header': typeof import("../components/Header.vue")['default']
@@ -49,6 +50,7 @@ interface _GlobalComponents {
     'NuxtRouteAnnouncer': typeof import("../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/app/components/server-placeholder")['default']
       'LazyAssetCard': LazyComponent<typeof import("../components/AssetCard.vue")['default']>
     'LazyAssetForm': LazyComponent<typeof import("../components/AssetForm.vue")['default']>
+    'LazyAssetSidebar': LazyComponent<typeof import("../components/AssetSidebar.vue")['default']>
     'LazyAssetTable': LazyComponent<typeof import("../components/AssetTable.vue")['default']>
     'LazyFooter': LazyComponent<typeof import("../components/Footer.vue")['default']>
     'LazyHeader': LazyComponent<typeof import("../components/Header.vue")['default']>
@@ -90,6 +92,7 @@ declare module 'vue' {
 
 export const AssetCard: typeof import("../components/AssetCard.vue")['default']
 export const AssetForm: typeof import("../components/AssetForm.vue")['default']
+export const AssetSidebar: typeof import("../components/AssetSidebar.vue")['default']
 export const AssetTable: typeof import("../components/AssetTable.vue")['default']
 export const Footer: typeof import("../components/Footer.vue")['default']
 export const Header: typeof import("../components/Header.vue")['default']
@@ -125,6 +128,7 @@ export const NuxtIsland: typeof import("../node_modules/.pnpm/nuxt@3.17.7_@vue+c
 export const NuxtRouteAnnouncer: typeof import("../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/app/components/server-placeholder")['default']
 export const LazyAssetCard: LazyComponent<typeof import("../components/AssetCard.vue")['default']>
 export const LazyAssetForm: LazyComponent<typeof import("../components/AssetForm.vue")['default']>
+export const LazyAssetSidebar: LazyComponent<typeof import("../components/AssetSidebar.vue")['default']>
 export const LazyAssetTable: LazyComponent<typeof import("../components/AssetTable.vue")['default']>
 export const LazyFooter: LazyComponent<typeof import("../components/Footer.vue")['default']>
 export const LazyHeader: LazyComponent<typeof import("../components/Header.vue")['default']>
