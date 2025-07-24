@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/supabase', '@nuxtjs/robots','@nuxtjs/sitemap'],
   supabase: {
@@ -11,6 +12,7 @@ export default defineNuxtConfig({
     UserAgent: '*',
     Disallow: '',
   },
+  
   sitemap: {
     siteUrl: 'https://zippykit.com',
     trailingSlash: false,
@@ -22,4 +24,17 @@ export default defineNuxtConfig({
     },
   },
   // No 'plugins' array here for Tailwind plugins!
+
+  app: {
+    head: {
+      link: [
+        {
+          rel: 'stylesheet',
+          href:
+            'https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap',
+        },
+      ],
+    },
+  },
+  
 });

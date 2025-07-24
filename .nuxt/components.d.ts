@@ -17,6 +17,7 @@ interface _GlobalComponents {
     'AssetSidebar': typeof import("../components/AssetSidebar.vue")['default']
     'AssetTable': typeof import("../components/AssetTable.vue")['default']
     'Footer': typeof import("../components/Footer.vue")['default']
+    'GlobalBackground': typeof import("../components/GlobalBackground.vue")['default']
     'Header': typeof import("../components/Header.vue")['default']
     'Hero': typeof import("../components/Hero.vue")['default']
     'LogoutButton': typeof import("../components/LogoutButton.vue")['default']
@@ -53,6 +54,7 @@ interface _GlobalComponents {
     'LazyAssetSidebar': LazyComponent<typeof import("../components/AssetSidebar.vue")['default']>
     'LazyAssetTable': LazyComponent<typeof import("../components/AssetTable.vue")['default']>
     'LazyFooter': LazyComponent<typeof import("../components/Footer.vue")['default']>
+    'LazyGlobalBackground': LazyComponent<typeof import("../components/GlobalBackground.vue")['default']>
     'LazyHeader': LazyComponent<typeof import("../components/Header.vue")['default']>
     'LazyHero': LazyComponent<typeof import("../components/Hero.vue")['default']>
     'LazyLogoutButton': LazyComponent<typeof import("../components/LogoutButton.vue")['default']>
@@ -95,6 +97,7 @@ export const AssetForm: typeof import("../components/AssetForm.vue")['default']
 export const AssetSidebar: typeof import("../components/AssetSidebar.vue")['default']
 export const AssetTable: typeof import("../components/AssetTable.vue")['default']
 export const Footer: typeof import("../components/Footer.vue")['default']
+export const GlobalBackground: typeof import("../components/GlobalBackground.vue")['default']
 export const Header: typeof import("../components/Header.vue")['default']
 export const Hero: typeof import("../components/Hero.vue")['default']
 export const LogoutButton: typeof import("../components/LogoutButton.vue")['default']
@@ -131,6 +134,7 @@ export const LazyAssetForm: LazyComponent<typeof import("../components/AssetForm
 export const LazyAssetSidebar: LazyComponent<typeof import("../components/AssetSidebar.vue")['default']>
 export const LazyAssetTable: LazyComponent<typeof import("../components/AssetTable.vue")['default']>
 export const LazyFooter: LazyComponent<typeof import("../components/Footer.vue")['default']>
+export const LazyGlobalBackground: LazyComponent<typeof import("../components/GlobalBackground.vue")['default']>
 export const LazyHeader: LazyComponent<typeof import("../components/Header.vue")['default']>
 export const LazyHero: LazyComponent<typeof import("../components/Hero.vue")['default']>
 export const LazyLogoutButton: LazyComponent<typeof import("../components/LogoutButton.vue")['default']>

@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w-6xl mx-auto px-4 py-4 space-y-8">
+  <section class="max-w-6xl mt-24 mx-auto px-4 py-4 space-y-8">
     <h1 class="text-3xl font-bold text-gray-800">About Zippykit</h1>
 
     <p class="text-gray-700 leading-relaxed text-base">

@@ -1,5 +1,5 @@
 <template>
-  <Hero />
+  <Hero class="mt-24" />
   <section class="max-w-6xl mx-auto p-2 space-y-8">
     <h1 class="text-2xl font-bold mb-4">Recently Added Files</h1>
 
