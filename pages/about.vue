@@ -1,40 +1,51 @@
 <template>
-  <section class="max-w-6xl mt-24 mx-auto px-4 py-4 space-y-8">
-    <h1 class="text-3xl font-bold text-gray-800">About Zippykit</h1>
-
-    <p class="text-gray-700 leading-relaxed text-base">
-      Zippykit is your go-to library of premium-quality digital assets — all
-      100% free. Download thousands of resources like <strong>UI kits</strong>,
-      <strong>plugins</strong>, <strong>templates</strong>,
-      <strong>software tools</strong>, <strong>courses</strong>, and more — no
-      ads, no paywalls, no nonsense.
-    </p>
-
-    <p class="text-gray-700 leading-relaxed text-base">
-      We’ve got over <strong>200,000+ curated files</strong> and we’re adding
-      fresh content every day. Whether you're a designer, developer, or creator,
-      you’ll find what you need fast — thanks to smart filters and a clean
-      interface.
-    </p>
-
-    <div
-      class="bg-gray-100 px-4 py-4 rounded-lg border text-sm text-gray-700 space-y-2"
-    >
-      <h2 class="font-semibold text-gray-800 text-lg">Why Zippykit?</h2>
-      <ul class="list-disc pl-5 space-y-1">
-        <li>Everything is 100% free — forever.</li>
-        <li>Blazing-fast downloads via direct links (Google Drive / CDN).</li>
-        <li>No ads, no popups, no sketchy redirects.</li>
-        <li>Filters and smart search to find exactly what you need.</li>
-        <li>New content added daily by our small, passionate team.</li>
-      </ul>
+  <section class="bg-white mt-24 py-20 px-4 sm:px-8 font-body text-gray-800">
+    <!-- Page Intro -->
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h1 class="text-3xl sm:text-4xl font-heading font-extrabold mb-4">
+        About Sprigggy
+      </h1>
+      <p class="text-base sm:text-lg text-gray-600">
+        Sprigggy is a free, open-source platform offering high-quality design assets — built to empower creatives everywhere.
+      </p>
     </div>
 
-    <p class="text-gray-700 text-sm leading-relaxed">
-      Need help or want to suggest a file? Reach out at
-      <a href="mailto:support@zippykit.com" class="text-blue-600 underline"
-        >support@zippykit.com</a
-      >
-    </p>
+    <!-- Our Story -->
+    <div class="max-w-4xl mx-auto space-y-10">
+      <div>
+        <h2 class="text-xl font-semibold mb-2">Why we built this</h2>
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+          Good design tools shouldn’t be hidden behind paywalls or buried in cluttered marketplaces. Sprigggy was created to make creative resources fast, accessible, and beautifully organized — with no fluff or friction.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold mb-2">Our mission</h2>
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+          We’re building a home for creators — a clean, simple place to discover, share, and use high-quality assets. Sprigggy isn’t just about files — it’s about freeing up time and focus so designers can do what they do best.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold mb-2">What we value</h2>
+        <ul class="list-disc list-inside text-sm sm:text-base text-gray-600 space-y-2">
+          <li>✨ Simplicity over noise</li>
+          <li>🎁 Free and open access</li>
+          <li>💬 Community-driven growth</li>
+          <li>🧠 Smart, purposeful design</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-20 text-center">
+      <NuxtLink to="/collections">
+        <button
+          class="bg-zinc-900 text-white px-6 py-3 rounded-full font-medium hover:bg-zinc-800 transition"
+        >
+          🎨 Browse Collections
+        </button>
+      </NuxtLink>
+    </div>
   </section>
 </template>

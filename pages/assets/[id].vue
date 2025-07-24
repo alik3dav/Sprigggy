@@ -159,7 +159,7 @@ watch(asset, (val) => {
         <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500">
           <span
             v-if="asset?.type"
-            class="inline-block bg-slate-100 rounded-full px-3 py-1 font-medium"
+            class="inline-block bg-slate-100 rounded-full px-3 py-2 font-medium"
           >
             {{ asset.type }}
           </span>
@@ -168,7 +168,7 @@ watch(asset, (val) => {
             <span
               v-for="tag in asset.tags"
               :key="tag"
-              class="inline-block bg-blue-100 text-blue-700 rounded-full px-3 py-1 font-semibold"
+              class="inline-block bg-blue-100 text-blue-700 rounded-full px-3 py-2 font-semibold"
             >
               {{ tag }}
             </span>
@@ -184,7 +184,7 @@ watch(asset, (val) => {
 
       <!-- Right Sidebar: Download, Info & Related -->
       <aside
-        class="lg:col-span-1 sticky top-18 self-start space-y-6 border border-slate-200  rounded-3xl p-4 "
+        class="lg:col-span-1 sticky top-18 self-start space-y-6  bg-slate-100  rounded-3xl p-4 "
       >
         <div>
           <a
