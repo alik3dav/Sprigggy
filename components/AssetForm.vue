@@ -37,15 +37,19 @@
 
     <!-- Description -->
     <div>
-      <label class="block font-medium mb-1"
-        >Description (Markdown supported)</label
-      >
+      <label class="block font-medium mb-1">Description (Markdown supported)</label>
       <textarea
         v-model="localForm.description"
         rows="5"
         class="w-full border border-gray-300 rounded px-3 py-2"
         placeholder="Write description here"
       ></textarea>
+
+      <!-- Markdown preview -->
+      <div
+        class="mt-3 p-4 border border-gray-200 rounded prose max-w-none bg-gray-50"
+        v-html="markdownPreview"
+      ></div>
     </div>
 
     <!-- Provider -->
@@ -110,45 +114,52 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue';
-const supabase = useSupabaseClient();
+import { ref, watch, computed } from 'vue'
+import { marked } from 'marked'
+
+const supabase = useSupabaseClient()
 
 const props = defineProps({
   modelValue: Object,
   isEditing: Boolean,
-});
+})
 
-const emit = defineEmits(['update:modelValue', 'submit', 'cancel']);
+const emit = defineEmits(['update:modelValue', 'submit', 'cancel'])
 
-const localForm = ref({ ...props.modelValue });
-const uploading = ref(false);
+const localForm = ref({ ...props.modelValue })
+const uploading = ref(false)
 
 watch(
   () => props.modelValue,
   (newVal) => {
-    localForm.value = { ...newVal };
+    localForm.value = { ...newVal }
   }
-);
+)
+
+// Computed markdown preview from localForm.description
+const markdownPreview = computed(() => {
+  return localForm.value.description ? marked.parse(localForm.value.description) : ''
+})
 
 async function handleFileChange(e) {
-  const file = e.target.files[0];
-  if (!file) return;
-  uploading.value = true;
-  const fileName = `${Date.now()}_${file.name}`;
-  const filePath = `assets/${fileName}`;
-  const { error } = await supabase.storage.from('assets').upload(filePath, file);
+  const file = e.target.files[0]
+  if (!file) return
+  uploading.value = true
+  const fileName = `${Date.now()}_${file.name}`
+  const filePath = `assets/${fileName}`
+
+  const { error } = await supabase.storage.from('assets').upload(filePath, file)
   if (error) {
-    // replace alert with a nicer UI notification
-    console.error('Image upload failed', error);
+    console.error('Image upload failed', error)
   } else {
-    const { data } = supabase.storage.from('assets').getPublicUrl(filePath);
-    localForm.value.image = data.publicUrl;
-    emit('update:modelValue', localForm.value);
+    const { data } = supabase.storage.from('assets').getPublicUrl(filePath)
+    localForm.value.image = data.publicUrl
+    emit('update:modelValue', localForm.value)
   }
-  uploading.value = false;
+  uploading.value = false
 }
 
 function onSubmit() {
-  emit('submit', { ...localForm.value });
+  emit('submit', { ...localForm.value })
 }
 </script>
