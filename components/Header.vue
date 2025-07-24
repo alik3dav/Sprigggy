@@ -8,7 +8,7 @@
         to="/"
         class="text-xl font-bold text-gray-900 whitespace-nowrap"
       >
-        Zippykit.io
+        <img src="/zippykit.png" alt="/zippykit.png" class="w-24 h-auto">
       </NuxtLink>
 
       <!-- Center: Search (hidden on small) -->

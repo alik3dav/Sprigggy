@@ -35,21 +35,12 @@
       />
     </div>
 
-    <!-- Description -->
+    <!-- Description (Toast UI Editor) -->
     <div>
-      <label class="block font-medium mb-1">Description (Markdown supported)</label>
-      <textarea
-        v-model="localForm.description"
-        rows="5"
-        class="w-full border border-gray-300 rounded px-3 py-2"
-        placeholder="Write description here"
-      ></textarea>
-
-      <!-- Markdown preview -->
-      <div
-        class="mt-3 p-4 border border-gray-200 rounded prose max-w-none bg-gray-50"
-        v-html="markdownPreview"
-      ></div>
+      <label class="block font-medium mb-1">Description (Markdown)</label>
+      <ClientOnly>
+        <ToastEditor v-model="localForm.description" />
+      </ClientOnly>
     </div>
 
     <!-- Provider -->
@@ -114,8 +105,8 @@
 </template>
 
 <script setup>
-import { ref, watch, computed } from 'vue'
-import { marked } from 'marked'
+import { ref, watch } from 'vue'
+import ToastEditor from '~/components/ToastEditor.vue'
 
 const supabase = useSupabaseClient()
 
@@ -135,11 +126,6 @@ watch(
     localForm.value = { ...newVal }
   }
 )
-
-// Computed markdown preview from localForm.description
-const markdownPreview = computed(() => {
-  return localForm.value.description ? marked.parse(localForm.value.description) : ''
-})
 
 async function handleFileChange(e) {
   const file = e.target.files[0]
