@@ -1,36 +1,28 @@
 <template>
-  <footer class="bg-gradient-to-r from-white via-gray-50 to-white text-gray-700 text-sm drop-shadow-md">
-    <div
-      class="max-w-6xl mx-auto px-8 py-12 flex flex-col md:flex-row items-center justify-between gap-8"
-    >
+  <footer class="w-full mt-24 bg-white border-t border-zinc-200 text-gray-700 text-sm">
+    <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
       <!-- Left: Copyright -->
-      <div class="text-center md:text-left text-gray-400 font-light select-none tracking-wide">
+      <div class="text-center md:text-left text-gray-400 font-light tracking-wide select-none">
         © {{ new Date().getFullYear() }} Sprigggy. All rights reserved.
       </div>
 
-      <!-- Middle: Stats -->
+      <!-- Middle: Stats (Optional block, clean integration) -->
       <StatsWidget />
 
       <!-- Right: Links -->
-      <nav
-        class="flex flex-wrap justify-center md:justify-end gap-8 text-gray-600 font-semibold"
-        aria-label="Footer navigation"
-      >
-        <a
-          href="/about"
-          class="relative group before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-[2px] before:bg-blue-500 before:transition-all before:duration-300 hover:before:w-full"
-          >About</a
+      <nav class="flex gap-6 text-gray-500 font-medium">
+        <NuxtLink
+          to="/about"
+          class="hover:text-black transition-colors relative after:content-[''] after:absolute after:-bottom-0.5 after:left-0 after:w-0 after:h-[1.5px] after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full"
         >
-        <a
-          href="/dmca"
-          class="relative group before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-[2px] before:bg-blue-500 before:transition-all before:duration-300 hover:before:w-full"
-          >DMCA Policy</a
+          About
+        </NuxtLink>
+        <NuxtLink
+          to="/collections"
+          class="hover:text-black transition-colors relative after:content-[''] after:absolute after:-bottom-0.5 after:left-0 after:w-0 after:h-[1.5px] after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full"
         >
-        <a
-          href="/privacy"
-          class="relative group before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-[2px] before:bg-blue-500 before:transition-all before:duration-300 hover:before:w-full"
-          >Privacy</a
-        >
+          Collections
+        </NuxtLink>
       </nav>
     </div>
   </footer>
