@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-6xl mx-auto p-6 space-y-6">
+  <div class="max-w-6xl mx-auto mt-24 p-6 space-y-6">
     <h1 class="text-3xl font-bold mb-6">Admin: Manage Assets</h1>
 
     <button
