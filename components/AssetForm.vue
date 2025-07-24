@@ -55,7 +55,7 @@
         <option value="google_drive">Google Drive</option>
         <option value="dropbox">Dropbox</option>
         <option value="mega">Mega</option>
-        <option value="mega">Workupload</option>
+        <option value="workupload">Workupload</option>
         <option value="other">Other</option>
       </select>
     </div>

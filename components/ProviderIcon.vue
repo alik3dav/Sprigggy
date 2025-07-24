@@ -6,6 +6,7 @@ const props = defineProps({
 });
 
 const iconSrc = computed(() => {
+  console.log('Provider name:', props.name);  // Debug log
   switch (props.name) {
     case 'google_drive':
       return '/icons/google-drive.png';
