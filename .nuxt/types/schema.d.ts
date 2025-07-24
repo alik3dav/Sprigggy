@@ -10,6 +10,14 @@ declare module '@nuxt/schema' {
      */
     ["supabase"]: typeof import("@nuxtjs/supabase").default extends NuxtModule<infer O> ? O : Record<string, any>
     /**
+     * Configuration for `/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module`
+     */
+    ["site"]: typeof import("/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxtjs/robots`
+     */
+    ["robots"]: typeof import("@nuxtjs/robots").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
      * Configuration for `@nuxt/devtools`
      */
     ["devtools"]: typeof import("@nuxt/devtools").default extends NuxtModule<infer O> ? O : Record<string, any>
@@ -28,6 +36,14 @@ declare module '@nuxt/schema' {
      */
     ["supabase"]?: typeof import("@nuxtjs/supabase").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     /**
+     * Configuration for `/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module`
+     */
+    ["site"]?: typeof import("/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxtjs/robots`
+     */
+    ["robots"]?: typeof import("@nuxtjs/robots").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
      * Configuration for `@nuxt/devtools`
      */
     ["devtools"]?: typeof import("@nuxt/devtools").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
@@ -35,7 +51,7 @@ declare module '@nuxt/schema' {
      * Configuration for `@nuxt/telemetry`
      */
     ["telemetry"]?: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    modules?: (undefined | null | false | NuxtModule<any> | string | [NuxtModule | string, Record<string, any>] | ["@nuxtjs/tailwindcss", Exclude<NuxtConfig["tailwindcss"], boolean>] | ["@nuxtjs/supabase", Exclude<NuxtConfig["supabase"], boolean>] | ["@nuxt/devtools", Exclude<NuxtConfig["devtools"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
+    modules?: (undefined | null | false | NuxtModule<any> | string | [NuxtModule | string, Record<string, any>] | ["@nuxtjs/tailwindcss", Exclude<NuxtConfig["tailwindcss"], boolean>] | ["@nuxtjs/supabase", Exclude<NuxtConfig["supabase"], boolean>] | ["/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module", Exclude<NuxtConfig["site"], boolean>] | ["@nuxtjs/robots", Exclude<NuxtConfig["robots"], boolean>] | ["@nuxt/devtools", Exclude<NuxtConfig["devtools"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
   }
 }
 declare module 'nuxt/schema' {
@@ -51,6 +67,16 @@ declare module 'nuxt/schema' {
      */
     ["supabase"]: typeof import("@nuxtjs/supabase").default extends NuxtModule<infer O> ? O : Record<string, any>
     /**
+     * Configuration for `/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module`
+     * @see https://www.npmjs.com/package//home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module
+     */
+    ["site"]: typeof import("/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxtjs/robots`
+     * @see https://www.npmjs.com/package/@nuxtjs/robots
+     */
+    ["robots"]: typeof import("@nuxtjs/robots").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
      * Configuration for `@nuxt/devtools`
      * @see https://www.npmjs.com/package/@nuxt/devtools
      */
@@ -73,6 +99,16 @@ declare module 'nuxt/schema' {
      */
     ["supabase"]?: typeof import("@nuxtjs/supabase").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     /**
+     * Configuration for `/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module`
+     * @see https://www.npmjs.com/package//home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module
+     */
+    ["site"]?: typeof import("/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxtjs/robots`
+     * @see https://www.npmjs.com/package/@nuxtjs/robots
+     */
+    ["robots"]?: typeof import("@nuxtjs/robots").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
      * Configuration for `@nuxt/devtools`
      * @see https://www.npmjs.com/package/@nuxt/devtools
      */
@@ -82,7 +118,7 @@ declare module 'nuxt/schema' {
      * @see https://www.npmjs.com/package/@nuxt/telemetry
      */
     ["telemetry"]?: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    modules?: (undefined | null | false | NuxtModule<any> | string | [NuxtModule | string, Record<string, any>] | ["@nuxtjs/tailwindcss", Exclude<NuxtConfig["tailwindcss"], boolean>] | ["@nuxtjs/supabase", Exclude<NuxtConfig["supabase"], boolean>] | ["@nuxt/devtools", Exclude<NuxtConfig["devtools"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
+    modules?: (undefined | null | false | NuxtModule<any> | string | [NuxtModule | string, Record<string, any>] | ["@nuxtjs/tailwindcss", Exclude<NuxtConfig["tailwindcss"], boolean>] | ["@nuxtjs/supabase", Exclude<NuxtConfig["supabase"], boolean>] | ["/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module", Exclude<NuxtConfig["site"], boolean>] | ["@nuxtjs/robots", Exclude<NuxtConfig["robots"], boolean>] | ["@nuxt/devtools", Exclude<NuxtConfig["devtools"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
   }
   interface RuntimeConfig {
    app: {
@@ -101,6 +137,44 @@ declare module 'nuxt/schema' {
 
    supabase: {
       serviceKey: any,
+   },
+
+   "nuxt-site-config": {
+      stack: Array<{
+
+      }>,
+
+      version: string,
+
+      debug: boolean,
+
+      multiTenancy: Array<any>,
+   },
+
+   "nuxt-robots": {
+      version: string,
+
+      isNuxtContentV2: boolean,
+
+      debug: boolean,
+
+      credits: boolean,
+
+      groups: Array<{
+
+      }>,
+
+      sitemap: Array<any>,
+
+      header: boolean,
+
+      robotsEnabledValue: string,
+
+      robotsDisabledValue: string,
+
+      cacheControl: string,
+
+      botDetection: boolean,
    },
   }
   interface PublicRuntimeConfig {

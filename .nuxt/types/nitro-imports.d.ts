@@ -19,6 +19,7 @@ declare global {
   const createEvent: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['createEvent']
   const createEventStream: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['createEventStream']
   const createRouter: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['createRouter']
+  const createSitePathResolver: typeof import('../../node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/runtime/server/composables/utils')['createSitePathResolver']
   const defaultContentType: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['defaultContentType']
   const defineAppConfig: typeof import('../../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/core/runtime/nitro/utils/config')['defineAppConfig']
   const defineCachedEventHandler: typeof import('../../node_modules/.pnpm/nitropack@2.12.3/node_modules/nitropack/dist/runtime/internal/cache')['defineCachedEventHandler']
@@ -43,10 +44,13 @@ declare global {
   const fromNodeMiddleware: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['fromNodeMiddleware']
   const fromPlainHandler: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['fromPlainHandler']
   const fromWebHandler: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['fromWebHandler']
+  const getBotDetection: typeof import('../../node_modules/.pnpm/@nuxtjs+robots@5.4.0_vue@3.5.17/node_modules/@nuxtjs/robots/dist/runtime/server/composables/getBotDetection')['getBotDetection']
+  const getBotInfo: typeof import('../../node_modules/.pnpm/@nuxtjs+robots@5.4.0_vue@3.5.17/node_modules/@nuxtjs/robots/dist/runtime/server/composables/getBotDetection')['getBotInfo']
   const getCookie: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['getCookie']
   const getHeader: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['getHeader']
   const getHeaders: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['getHeaders']
   const getMethod: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['getMethod']
+  const getPathRobotConfig: typeof import('../../node_modules/.pnpm/@nuxtjs+robots@5.4.0_vue@3.5.17/node_modules/@nuxtjs/robots/dist/runtime/server/composables/getPathRobotConfig')['getPathRobotConfig']
   const getProxyRequestHeaders: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['getProxyRequestHeaders']
   const getQuery: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['getQuery']
   const getRequestFingerprint: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['getRequestFingerprint']
@@ -66,10 +70,13 @@ declare global {
   const getRouterParam: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['getRouterParam']
   const getRouterParams: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['getRouterParams']
   const getSession: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['getSession']
+  const getSiteIndexable: typeof import('../../node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/runtime/server/composables/getSiteIndexable')['getSiteIndexable']
+  const getSiteRobotConfig: typeof import('../../node_modules/.pnpm/@nuxtjs+robots@5.4.0_vue@3.5.17/node_modules/@nuxtjs/robots/dist/runtime/server/composables/getSiteRobotConfig')['getSiteRobotConfig']
   const getValidatedQuery: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['getValidatedQuery']
   const getValidatedRouterParams: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['getValidatedRouterParams']
   const handleCacheHeaders: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['handleCacheHeaders']
   const handleCors: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['handleCors']
+  const isBot: typeof import('../../node_modules/.pnpm/@nuxtjs+robots@5.4.0_vue@3.5.17/node_modules/@nuxtjs/robots/dist/runtime/server/composables/getBotDetection')['isBot']
   const isCorsOriginAllowed: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['isCorsOriginAllowed']
   const isError: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['isError']
   const isEvent: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['isEvent']
@@ -116,14 +123,26 @@ declare global {
   const toWebRequest: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['toWebRequest']
   const unsealSession: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['unsealSession']
   const updateSession: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['updateSession']
+  const updateSiteConfig: typeof import('../../node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/runtime/server/composables/updateSiteConfig')['updateSiteConfig']
   const useAppConfig: typeof import('../../node_modules/.pnpm/nitropack@2.12.3/node_modules/nitropack/dist/runtime/internal/config')['useAppConfig']
   const useBase: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['useBase']
   const useEvent: typeof import('../../node_modules/.pnpm/nitropack@2.12.3/node_modules/nitropack/dist/runtime/internal/context')['useEvent']
   const useNitroApp: typeof import('../../node_modules/.pnpm/nitropack@2.12.3/node_modules/nitropack/dist/runtime/internal/app')['useNitroApp']
+  const useNitroOrigin: typeof import('../../node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/runtime/server/composables/useNitroOrigin')['useNitroOrigin']
   const useRuntimeConfig: typeof import('../../node_modules/.pnpm/nitropack@2.12.3/node_modules/nitropack/dist/runtime/internal/config')['useRuntimeConfig']
+  const useRuntimeConfigNuxtRobots: typeof import('../../node_modules/.pnpm/@nuxtjs+robots@5.4.0_vue@3.5.17/node_modules/@nuxtjs/robots/dist/runtime/server/composables/useRuntimeConfigNuxtRobots')['useRuntimeConfigNuxtRobots']
   const useSession: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['useSession']
+  const useSiteConfig: typeof import('../../node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/runtime/server/composables/useSiteConfig')['useSiteConfig']
   const useStorage: typeof import('../../node_modules/.pnpm/nitropack@2.12.3/node_modules/nitropack/dist/runtime/internal/storage')['useStorage']
+  const withSiteTrailingSlash: typeof import('../../node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/runtime/server/composables/utils')['withSiteTrailingSlash']
+  const withSiteUrl: typeof import('../../node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/runtime/server/composables/utils')['withSiteUrl']
   const writeEarlyHints: typeof import('../../node_modules/.pnpm/h3@1.15.3/node_modules/h3')['writeEarlyHints']
+}
+// for type re-export
+declare global {
+  // @ts-ignore
+  export type { BotDetectionContext } from '../../node_modules/.pnpm/@nuxtjs+robots@5.4.0_vue@3.5.17/node_modules/@nuxtjs/robots/dist/runtime/server/composables/getBotDetection.d'
+  import('../../node_modules/.pnpm/@nuxtjs+robots@5.4.0_vue@3.5.17/node_modules/@nuxtjs/robots/dist/runtime/server/composables/getBotDetection.d')
 }
 export { useNitroApp } from 'nitropack/runtime/internal/app';
 export { useRuntimeConfig, useAppConfig } from 'nitropack/runtime/internal/config';
@@ -139,3 +158,12 @@ export { defineNitroErrorHandler } from 'nitropack/runtime/internal/error/utils'
 export { appendCorsHeaders, appendCorsPreflightHeaders, appendHeader, appendHeaders, appendResponseHeader, appendResponseHeaders, assertMethod, callNodeListener, clearResponseHeaders, clearSession, createApp, createAppEventHandler, createError, createEvent, createEventStream, createRouter, defaultContentType, defineEventHandler, defineLazyEventHandler, defineNodeListener, defineNodeMiddleware, defineRequestMiddleware, defineResponseMiddleware, defineWebSocket, defineWebSocketHandler, deleteCookie, dynamicEventHandler, eventHandler, fetchWithEvent, fromNodeMiddleware, fromPlainHandler, fromWebHandler, getCookie, getHeader, getHeaders, getMethod, getProxyRequestHeaders, getQuery, getRequestFingerprint, getRequestHeader, getRequestHeaders, getRequestHost, getRequestIP, getRequestPath, getRequestProtocol, getRequestURL, getRequestWebStream, getResponseHeader, getResponseHeaders, getResponseStatus, getResponseStatusText, getRouterParam, getRouterParams, getSession, getValidatedQuery, getValidatedRouterParams, handleCacheHeaders, handleCors, isCorsOriginAllowed, isError, isEvent, isEventHandler, isMethod, isPreflightRequest, isStream, isWebResponse, lazyEventHandler, parseCookies, promisifyNodeListener, proxyRequest, readBody, readFormData, readMultipartFormData, readRawBody, readValidatedBody, removeResponseHeader, sanitizeStatusCode, sanitizeStatusMessage, sealSession, send, sendError, sendIterable, sendNoContent, sendProxy, sendRedirect, sendStream, sendWebResponse, serveStatic, setCookie, setHeader, setHeaders, setResponseHeader, setResponseHeaders, setResponseStatus, splitCookiesString, toEventHandler, toNodeListener, toPlainHandler, toWebHandler, toWebRequest, unsealSession, updateSession, useBase, useSession, writeEarlyHints } from 'h3';
 export { buildAssetsURL as __buildAssetsURL, publicAssetsURL as __publicAssetsURL } from '/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/core/runtime/nitro/utils/paths';
 export { defineAppConfig } from '/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/core/runtime/nitro/utils/config';
+export { getSiteIndexable } from '/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/runtime/server/composables/getSiteIndexable';
+export { updateSiteConfig } from '/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/runtime/server/composables/updateSiteConfig';
+export { useNitroOrigin } from '/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/runtime/server/composables/useNitroOrigin';
+export { useSiteConfig } from '/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/runtime/server/composables/useSiteConfig';
+export { createSitePathResolver, withSiteTrailingSlash, withSiteUrl } from '/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/runtime/server/composables/utils';
+export { getBotDetection, isBot, getBotInfo } from '/home/alik3dav/ZippyKit/node_modules/.pnpm/@nuxtjs+robots@5.4.0_vue@3.5.17/node_modules/@nuxtjs/robots/dist/runtime/server/composables/getBotDetection';
+export { getPathRobotConfig } from '/home/alik3dav/ZippyKit/node_modules/.pnpm/@nuxtjs+robots@5.4.0_vue@3.5.17/node_modules/@nuxtjs/robots/dist/runtime/server/composables/getPathRobotConfig';
+export { getSiteRobotConfig } from '/home/alik3dav/ZippyKit/node_modules/.pnpm/@nuxtjs+robots@5.4.0_vue@3.5.17/node_modules/@nuxtjs/robots/dist/runtime/server/composables/getSiteRobotConfig';
+export { useRuntimeConfigNuxtRobots } from '/home/alik3dav/ZippyKit/node_modules/.pnpm/@nuxtjs+robots@5.4.0_vue@3.5.17/node_modules/@nuxtjs/robots/dist/runtime/server/composables/useRuntimeConfigNuxtRobots';

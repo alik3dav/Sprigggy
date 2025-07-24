@@ -32,4 +32,31 @@ onMounted(async () => {
   if (error) console.error(error);
   else recent.value = data;
 });
+
+useHead({
+  title: 'Free Design Assets & Templates | ZippyKit',
+  meta: [
+    {
+      name: 'description',
+      content: 'Download free design templates, plugins, mockups and more. Curated and useful assets for creatives.',
+    },
+    {
+      name: 'keywords',
+      content: 'free design templates, figma files, ui kits, mockups, zippykit, design tools',
+    },
+    { property: 'og:title', content: 'ZippyKit – Free Design Assets' },
+    {
+      property: 'og:description',
+      content: 'Explore a curated library of free design tools, templates, and plugins.',
+    },
+    {
+      property: 'og:image',
+      content: 'https://zippykit.com/og-image.jpg', // Replace with your actual image
+    },
+    { property: 'og:url', content: 'https://zippykit.com' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+  ],
+  link: [{ rel: 'canonical', href: 'https://zippykit.com' }],
+})
+
 </script>

@@ -1,12 +1,12 @@
 import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { tmpdir } from 'node:os';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getQuery as getQuery$1, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, getRouterParam, getResponseStatusText } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/h3@1.15.3/node_modules/h3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getRequestHost, getRequestProtocol, setHeader, getQuery as getQuery$1, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, getRouterParam, getResponseStatusText } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/h3@1.15.3/node_modules/h3/dist/index.mjs';
 import { Server } from 'node:http';
 import { resolve, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
 import { parentPort, threadId } from 'node:worker_threads';
 import { escapeHtml } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/@vue+shared@3.5.17/node_modules/@vue/shared/dist/shared.cjs.js';
 import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/vue-bundle-renderer@2.1.1/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, decodePath, withLeadingSlash, withoutTrailingSlash, joinRelativeURL } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/ufo@1.6.1/node_modules/ufo/dist/index.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, hasProtocol, withHttps, withoutTrailingSlash, decodePath, withLeadingSlash, withoutProtocol, withBase, joinRelativeURL } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/ufo@1.6.1/node_modules/ufo/dist/index.mjs';
 import { renderToString } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue/server-renderer/index.mjs';
 import destr, { destr as destr$1 } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/destr@2.0.5/node_modules/destr/dist/index.mjs';
 import { createHooks } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/hookable@5.5.3/node_modules/hookable/dist/index.mjs';
@@ -16,12 +16,12 @@ import { createStorage, prefixStorage } from 'file:///home/alik3dav/ZippyKit/nod
 import unstorage_47drivers_47fs from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/unstorage@1.16.1_db0@0.3.2_ioredis@5.6.1/node_modules/unstorage/drivers/fs.mjs';
 import { digest } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/ohash@2.0.11/node_modules/ohash/dist/index.mjs';
 import { klona } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/klona@2.0.6/node_modules/klona/dist/index.mjs';
-import defu, { defuFn } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/defu@6.1.4/node_modules/defu/dist/defu.mjs';
+import defu, { defuFn, defu as defu$1, createDefu } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/defu@6.1.4/node_modules/defu/dist/defu.mjs';
 import { snakeCase } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/scule@1.3.0/node_modules/scule/dist/index.mjs';
 import { getContext } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/unctx@2.4.1/node_modules/unctx/dist/index.mjs';
 import { toRouteMatcher, createRouter } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/radix3@1.1.2/node_modules/radix3/dist/index.mjs';
 import { readFile } from 'node:fs/promises';
-import consola, { consola as consola$1 } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/consola@3.4.2/node_modules/consola/dist/index.mjs';
+import consola, { consola as consola$1, createConsola } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/consola@3.4.2/node_modules/consola/dist/index.mjs';
 import { ErrorParser } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/youch-core@0.3.3/node_modules/youch-core/build/index.js';
 import { Youch } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/youch@4.1.0-beta.8/node_modules/youch/build/index.js';
 import { SourceMapConsumer } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/source-map@0.7.4/node_modules/source-map/source-map.js';
@@ -29,6 +29,7 @@ import { AsyncLocalStorage } from 'node:async_hooks';
 import { stringify, uneval } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/devalue@5.1.1/node_modules/devalue/index.js';
 import { captureRawStackTrace, parseRawStackTrace } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/errx@0.1.0/node_modules/errx/dist/index.js';
 import { isVNode, toValue, isRef } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue/index.mjs';
+import devalue from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/@nuxt+devalue@2.0.2/node_modules/@nuxt/devalue/dist/devalue.mjs';
 import { promises } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname as dirname$1, resolve as resolve$1 } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/pathe@2.0.3/node_modules/pathe/dist/index.mjs';
@@ -635,6 +636,18 @@ const _inlineRuntimeConfig = {
       "/__nuxt_error": {
         "cache": false
       },
+      "/_nuxt": {
+        "robots": "noindex",
+        "headers": {
+          "X-Robots-Tag": "noindex"
+        }
+      },
+      "/_nuxt/**": {
+        "robots": "noindex",
+        "headers": {
+          "X-Robots-Tag": "noindex"
+        }
+      },
       "/_nuxt/builds/meta/**": {
         "headers": {
           "cache-control": "public, max-age=31536000, immutable"
@@ -672,6 +685,49 @@ const _inlineRuntimeConfig = {
   },
   "supabase": {
     "serviceKey": ""
+  },
+  "nuxt-site-config": {
+    "stack": [
+      {
+        "_context": "system",
+        "_priority": -15,
+        "name": "ZippyKit",
+        "env": "development"
+      },
+      {
+        "_context": "package.json",
+        "_priority": -10,
+        "name": "nuxt-app"
+      }
+    ],
+    "version": "3.2.2",
+    "debug": false,
+    "multiTenancy": []
+  },
+  "nuxt-robots": {
+    "version": "5.4.0",
+    "isNuxtContentV2": false,
+    "debug": false,
+    "credits": true,
+    "groups": [
+      {
+        "userAgent": [
+          "*"
+        ],
+        "disallow": [
+          ""
+        ],
+        "allow": [],
+        "_indexable": true,
+        "_rules": []
+      }
+    ],
+    "sitemap": [],
+    "header": true,
+    "robotsEnabledValue": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "robotsDisabledValue": "noindex, nofollow",
+    "cacheControl": "max-age=14400, must-revalidate",
+    "botDetection": true
   }
 };
 const envOptions = {
@@ -1136,9 +1192,510 @@ function onConsoleLog(callback) {
   consola$1.wrapConsole();
 }
 
+function normalizeSiteConfig(config) {
+  if (typeof config.indexable !== "undefined")
+    config.indexable = String(config.indexable) !== "false";
+  if (typeof config.trailingSlash !== "undefined" && !config.trailingSlash)
+    config.trailingSlash = String(config.trailingSlash) !== "false";
+  if (config.url && !hasProtocol(String(config.url), { acceptRelative: true, strict: false }))
+    config.url = withHttps(String(config.url));
+  const keys = Object.keys(config).sort((a, b) => a.localeCompare(b));
+  const newConfig = {};
+  for (const k of keys)
+    newConfig[k] = config[k];
+  return newConfig;
+}
+function createSiteConfigStack(options) {
+  const debug = options?.debug || false;
+  const stack = [];
+  function push(input) {
+    if (!input || typeof input !== "object" || Object.keys(input).length === 0) {
+      return () => {
+      };
+    }
+    if (!input._context && debug) {
+      let lastFunctionName = new Error("tmp").stack?.split("\n")[2].split(" ")[5];
+      if (lastFunctionName?.includes("/"))
+        lastFunctionName = "anonymous";
+      input._context = lastFunctionName;
+    }
+    const entry = {};
+    for (const k in input) {
+      const val = input[k];
+      if (typeof val !== "undefined" && val !== "")
+        entry[k] = val;
+    }
+    let idx;
+    if (Object.keys(entry).filter((k) => !k.startsWith("_")).length > 0)
+      idx = stack.push(entry);
+    return () => {
+      if (typeof idx !== "undefined") {
+        stack.splice(idx - 1, 1);
+      }
+    };
+  }
+  function get(options2) {
+    const siteConfig = {};
+    if (options2?.debug)
+      siteConfig._context = {};
+    siteConfig._priority = {};
+    for (const o in stack.sort((a, b) => (a._priority || 0) - (b._priority || 0))) {
+      for (const k in stack[o]) {
+        const key = k;
+        const val = options2?.resolveRefs ? toValue(stack[o][k]) : stack[o][k];
+        if (!k.startsWith("_") && typeof val !== "undefined" && val !== "") {
+          siteConfig[k] = val;
+          if (typeof stack[o]._priority !== "undefined" && stack[o]._priority !== -1) {
+            siteConfig._priority[key] = stack[o]._priority;
+          }
+          if (options2?.debug)
+            siteConfig._context[key] = stack[o]._context?.[key] || stack[o]._context || "anonymous";
+        }
+      }
+    }
+    return options2?.skipNormalize ? siteConfig : normalizeSiteConfig(siteConfig);
+  }
+  return {
+    stack,
+    push,
+    get
+  };
+}
+
+function envSiteConfig(env) {
+  return Object.fromEntries(Object.entries(env).filter(([k]) => k.startsWith("NUXT_SITE_") || k.startsWith("NUXT_PUBLIC_SITE_")).map(([k, v]) => [
+    k.replace(/^NUXT_(PUBLIC_)?SITE_/, "").split("_").map((s, i) => i === 0 ? s.toLowerCase() : s[0].toUpperCase() + s.slice(1).toLowerCase()).join(""),
+    v
+  ]));
+}
+
+const logger$1 = /* @__PURE__ */ createConsola({
+  defaults: {
+    tag: "nuxt-site-config"
+  }
+});
+
+function useSiteConfig(e, _options) {
+  if (!e.context._initedSiteConfig) {
+    logger$1.warn("Site config has not been initialized yet. If you're trying to access site config in a server middleware then this not yet supported. See https://github.com/harlan-zw/nuxt-seo/issues/397");
+  }
+  e.context.siteConfig = e.context.siteConfig || createSiteConfigStack();
+  const options = defu$1(_options, useRuntimeConfig(e)["nuxt-site-config"], { debug: false });
+  return e.context.siteConfig.get(options);
+}
+
+const _jGfnC2vKOdVtharSeLDJ6a2WVFHJiAiaaRlotWA = defineNitroPlugin(async (nitroApp) => {
+  nitroApp.hooks.hook("render:html", async (ctx, { event }) => {
+    const routeOptions = getRouteRules(event);
+    const isIsland = process.env.NUXT_COMPONENT_ISLANDS && event.path.startsWith("/__nuxt_island");
+    event.path;
+    const noSSR = event.context.nuxt?.noSSR || routeOptions.ssr === false && !isIsland || (false);
+    if (noSSR) {
+      const siteConfig = Object.fromEntries(
+        Object.entries(useSiteConfig(event)).map(([k, v]) => [k, toValue(v)])
+      );
+      ctx.body.push(`<script>window.__NUXT_SITE_CONFIG__=${devalue(siteConfig)}<\/script>`);
+    }
+  });
+});
+
+const KNOWN_SEARCH_BOTS = [
+  {
+    pattern: "googlebot",
+    name: "googlebot",
+    secondaryPatterns: ["google.com/bot.html"]
+  },
+  {
+    pattern: "bingbot",
+    name: "bingbot",
+    secondaryPatterns: ["msnbot"]
+  },
+  {
+    pattern: "yandexbot",
+    name: "yandexbot"
+  },
+  {
+    pattern: "baiduspider",
+    name: "baiduspider",
+    secondaryPatterns: ["baidu.com"]
+  },
+  {
+    pattern: "duckduckbot",
+    name: "duckduckbot",
+    secondaryPatterns: ["duckduckgo.com"]
+  },
+  {
+    pattern: "slurp",
+    name: "yahoo"
+  }
+];
+const SOCIAL_BOTS = [
+  {
+    pattern: "twitterbot",
+    name: "twitter",
+    secondaryPatterns: ["twitter"]
+  },
+  {
+    pattern: "facebookexternalhit",
+    name: "facebook",
+    secondaryPatterns: ["facebook.com"]
+  },
+  {
+    pattern: "linkedinbot",
+    name: "linkedin",
+    secondaryPatterns: ["linkedin"]
+  },
+  {
+    pattern: "pinterestbot",
+    name: "pinterest",
+    secondaryPatterns: ["pinterest"]
+  },
+  {
+    pattern: "discordbot",
+    name: "discord",
+    secondaryPatterns: ["discordapp"]
+  }
+];
+const SEO_BOTS = [
+  {
+    pattern: "mj12bot",
+    name: "majestic12",
+    secondaryPatterns: ["majestic12.co.uk/bot"]
+  },
+  {
+    pattern: "ahrefsbot",
+    name: "ahrefs",
+    secondaryPatterns: ["ahrefs.com"]
+  },
+  {
+    pattern: "semrushbot",
+    name: "semrush",
+    secondaryPatterns: ["semrush.com/bot"]
+  },
+  {
+    pattern: "screaming frog",
+    name: "screaming-frog",
+    secondaryPatterns: ["screamingfrog.co.uk"]
+  },
+  {
+    pattern: "rogerbot",
+    name: "moz"
+  }
+];
+const AI_BOTS = [
+  {
+    pattern: "anthropic",
+    name: "anthropic"
+  },
+  {
+    pattern: "claude",
+    name: "claude"
+  },
+  {
+    pattern: "gptbot",
+    name: "gpt",
+    secondaryPatterns: ["openai.com"]
+  },
+  {
+    pattern: "googlebot-news",
+    name: "google-news"
+  },
+  {
+    pattern: "cohere",
+    name: "cohere",
+    secondaryPatterns: ["cohere.com"]
+  },
+  {
+    pattern: "ccbot",
+    name: "commoncrawl",
+    secondaryPatterns: ["commoncrawl.org"]
+  },
+  {
+    pattern: "perplexitybot",
+    name: "perplexity",
+    secondaryPatterns: ["perplexity.ai"]
+  }
+];
+const HTTP_TOOL_BOTS = [
+  {
+    pattern: "python-requests",
+    name: "requests",
+    secondaryPatterns: ["python"]
+  },
+  {
+    pattern: "wget",
+    name: "wget"
+  },
+  {
+    pattern: "curl",
+    name: "curl",
+    secondaryPatterns: ["curl"]
+  }
+];
+const SECURITY_SCANNING_BOTS = [
+  {
+    pattern: "zgrab",
+    name: "zgrab"
+  },
+  {
+    pattern: "masscan",
+    name: "masscan"
+  },
+  {
+    pattern: "nmap",
+    name: "nmap",
+    secondaryPatterns: ["insecure.org"]
+  },
+  {
+    pattern: "nikto",
+    name: "nikto"
+  },
+  {
+    pattern: "wpscan",
+    name: "wpscan"
+  }
+];
+const SCRAPING_BOTS = [
+  {
+    pattern: "scrapy",
+    name: "scrapy",
+    secondaryPatterns: ["scrapy.org"]
+  }
+];
+const AUTOMATION_BOTS = [
+  {
+    pattern: "phantomjs",
+    name: "phantomjs"
+  },
+  {
+    pattern: "headless",
+    name: "headless-browser"
+  },
+  {
+    pattern: "playwright",
+    name: "playwright"
+  },
+  {
+    pattern: "selenium",
+    name: "selenium",
+    secondaryPatterns: ["webdriver"]
+  },
+  {
+    pattern: "puppeteer",
+    name: "puppeteer",
+    secondaryPatterns: ["headless"]
+  }
+];
+const GENERIC_BOTS = [
+  {
+    pattern: "bot",
+    name: "generic-bot"
+  },
+  {
+    pattern: "spider",
+    name: "generic-spider"
+  },
+  {
+    pattern: "crawler",
+    name: "generic-crawler"
+  },
+  {
+    pattern: "scraper",
+    name: "generic-scraper"
+  }
+];
+const BOT_MAP = [
+  {
+    type: "search-engine",
+    bots: KNOWN_SEARCH_BOTS,
+    trusted: true
+  },
+  {
+    type: "social",
+    bots: SOCIAL_BOTS,
+    trusted: true
+  },
+  {
+    type: "seo",
+    bots: SEO_BOTS,
+    trusted: true
+  },
+  {
+    type: "ai",
+    bots: AI_BOTS,
+    trusted: true
+  },
+  {
+    type: "generic",
+    bots: GENERIC_BOTS,
+    trusted: false
+  },
+  {
+    type: "automation",
+    bots: AUTOMATION_BOTS,
+    trusted: false
+  },
+  {
+    type: "http-tool",
+    bots: HTTP_TOOL_BOTS,
+    trusted: false
+  },
+  {
+    type: "security-scanner",
+    bots: SECURITY_SCANNING_BOTS,
+    trusted: false
+  },
+  {
+    type: "scraping",
+    bots: SCRAPING_BOTS,
+    trusted: false
+  }
+];
+function matches(pattern, path) {
+  const pathLength = path.length;
+  const patternLength = pattern.length;
+  const matchingLengths = Array.from({ length: pathLength + 1 }).fill(0);
+  let numMatchingLengths = 1;
+  let p = 0;
+  while (p < patternLength) {
+    if (pattern[p] === "$" && p + 1 === patternLength) {
+      return matchingLengths[numMatchingLengths - 1] === pathLength;
+    }
+    if (pattern[p] === "*") {
+      numMatchingLengths = pathLength - matchingLengths[0] + 1;
+      for (let i = 1; i < numMatchingLengths; i++) {
+        matchingLengths[i] = matchingLengths[i - 1] + 1;
+      }
+    } else {
+      let numMatches = 0;
+      for (let i = 0; i < numMatchingLengths; i++) {
+        const matchLength = matchingLengths[i];
+        if (matchLength < pathLength && path[matchLength] === pattern[p]) {
+          matchingLengths[numMatches++] = matchLength + 1;
+        }
+      }
+      if (numMatches === 0) {
+        return false;
+      }
+      numMatchingLengths = numMatches;
+    }
+    p++;
+  }
+  return true;
+}
+function matchPathToRule(path, _rules) {
+  let matchedRule = null;
+  const rules = _rules.filter(Boolean);
+  const rulesLength = rules.length;
+  let i = 0;
+  while (i < rulesLength) {
+    const rule = rules[i];
+    if (!rule || !matches(rule.pattern, path)) {
+      i++;
+      continue;
+    }
+    if (!matchedRule || rule.pattern.length > matchedRule.pattern.length) {
+      matchedRule = rule;
+    } else if (rule.pattern.length === matchedRule.pattern.length && rule.allow && !matchedRule.allow) {
+      matchedRule = rule;
+    }
+    i++;
+  }
+  return matchedRule;
+}
+function asArray(v) {
+  return typeof v === "undefined" ? [] : Array.isArray(v) ? v : [v];
+}
+function generateRobotsTxt({ groups, sitemaps }) {
+  const lines = [];
+  for (const group of groups) {
+    for (const comment of group.comment || [])
+      lines.push(`# ${comment}`);
+    for (const userAgent of group.userAgent || ["*"])
+      lines.push(`User-agent: ${userAgent}`);
+    for (const allow of group.allow || [])
+      lines.push(`Allow: ${allow}`);
+    for (const disallow of group.disallow || [])
+      lines.push(`Disallow: ${disallow}`);
+    for (const cleanParam of group.cleanParam || [])
+      lines.push(`Clean-param: ${cleanParam}`);
+    lines.push("");
+  }
+  for (const sitemap of sitemaps)
+    lines.push(`Sitemap: ${sitemap}`);
+  return lines.join("\n");
+}
+createDefu((obj, key, value) => {
+  if (Array.isArray(obj[key]) && Array.isArray(value))
+    obj[key] = Array.from(/* @__PURE__ */ new Set([...obj[key], ...value]));
+  return obj[key];
+});
+function createPatternMap() {
+  const patternMap = /* @__PURE__ */ new Map();
+  for (const def of BOT_MAP) {
+    for (const bot of def.bots) {
+      const patterns = [bot.pattern, ...bot.secondaryPatterns || []];
+      for (const pattern of patterns) {
+        patternMap.set(pattern.toLowerCase(), {
+          botName: bot.name,
+          botCategory: def.type,
+          trusted: def.trusted
+        });
+      }
+    }
+  }
+  return patternMap;
+}
+
+function useRuntimeConfigNuxtRobots(event) {
+  return useRuntimeConfig(event)["nuxt-robots"];
+}
+
+const logger = createConsola({
+  defaults: { tag: "@nuxtjs/robots" }
+});
+
+async function resolveRobotsTxtContext(e, nitro = useNitroApp()) {
+  const { groups, sitemap: sitemaps } = useRuntimeConfigNuxtRobots(e);
+  const generateRobotsTxtCtx = {
+    event: e,
+    context: e ? "robots.txt" : "init",
+    ...JSON.parse(JSON.stringify({ groups, sitemaps }))
+  };
+  await nitro.hooks.callHook("robots:config", generateRobotsTxtCtx);
+  nitro._robots.ctx = generateRobotsTxtCtx;
+  return generateRobotsTxtCtx;
+}
+
+const _k6YynqqTjy4c59eX3B1Hf29Uh0Y1IAUQpSJ2CIdwSuk = defineNitroPlugin(async (nitroApp) => {
+  const { isNuxtContentV2, robotsDisabledValue, botDetection } = useRuntimeConfigNuxtRobots();
+  if (botDetection !== false) {
+    nitroApp._robotsPatternMap = createPatternMap();
+  }
+  nitroApp._robots = {};
+  await resolveRobotsTxtContext(void 0, nitroApp);
+  const nuxtContentUrls = /* @__PURE__ */ new Set();
+  if (isNuxtContentV2) {
+    let urls;
+    try {
+      urls = await (await nitroApp.localFetch("/__robots__/nuxt-content.json", {})).json();
+    } catch (e) {
+      logger.error("Failed to read robot rules from content files.", e);
+    }
+    if (urls && Array.isArray(urls) && urls.length) {
+      urls.forEach((url) => nuxtContentUrls.add(withoutTrailingSlash(url)));
+    }
+  }
+  if (nuxtContentUrls.size) {
+    nitroApp._robots.nuxtContentUrls = nuxtContentUrls;
+  }
+});
+
 const plugins = [
   _rv1sZRisI3_E2p9JYykAXL9SKAfOC9ZuzRQN5J1Rxnw,
-_XXMilwe0uRPDrHFpF51eUDBLYh4ep2j3i1MszDzQxG8
+_XXMilwe0uRPDrHFpF51eUDBLYh4ep2j3i1MszDzQxG8,
+_jGfnC2vKOdVtharSeLDJ6a2WVFHJiAiaaRlotWA,
+_k6YynqqTjy4c59eX3B1Hf29Uh0Y1IAUQpSJ2CIdwSuk
 ];
 
 const assets = {};
@@ -1228,6 +1785,593 @@ const _28IEIe = eventHandler((event) => {
     setResponseHeader(event, "Content-Length", asset.size);
   }
   return readAsset(id);
+});
+
+function useNitroOrigin(e) {
+  const cert = process.env.NITRO_SSL_CERT;
+  const key = process.env.NITRO_SSL_KEY;
+  let host = process.env.NITRO_HOST || process.env.HOST || false;
+  let port = false;
+  port = process.env.NITRO_PORT || process.env.PORT || "3000";
+  let protocol = cert && key || false ? "https" : "http";
+  if (process.env.__NUXT_DEV__) {
+    const origin = JSON.parse(process.env.__NUXT_DEV__).proxy.url;
+    host = withoutProtocol(origin);
+    protocol = origin.includes("https") ? "https" : "http";
+  } else if (process.env.NUXT_VITE_NODE_OPTIONS) {
+    const origin = JSON.parse(process.env.NUXT_VITE_NODE_OPTIONS).baseURL.replace("/__nuxt_vite_node__", "");
+    host = withoutProtocol(origin);
+    protocol = origin.includes("https") ? "https" : "http";
+  } else if (e) {
+    host = getRequestHost(e, { xForwardedHost: true }) || host;
+    protocol = getRequestProtocol(e, { xForwardedProto: true }) || protocol;
+  }
+  if (typeof host === "string" && host.includes(":")) {
+    port = host.split(":").pop();
+    host = host.split(":")[0];
+  }
+  port = port ? `:${port}` : "";
+  return withTrailingSlash(`${protocol}://${host}${port}`);
+}
+
+const _w3OoJb = eventHandler(async (e) => {
+  if (e.context._initedSiteConfig)
+    return;
+  const runtimeConfig = useRuntimeConfig(e);
+  const config = runtimeConfig["nuxt-site-config"];
+  const nitroApp = useNitroApp();
+  const siteConfig = e.context.siteConfig || createSiteConfigStack({
+    debug: config.debug
+  });
+  const nitroOrigin = useNitroOrigin(e);
+  e.context.siteConfigNitroOrigin = nitroOrigin;
+  {
+    siteConfig.push({
+      _context: "nitro:init",
+      _priority: -4,
+      url: nitroOrigin
+    });
+  }
+  siteConfig.push({
+    _context: "runtimeEnv",
+    _priority: 0,
+    ...runtimeConfig.site || {},
+    ...runtimeConfig.public.site || {},
+    // @ts-expect-error untyped
+    ...envSiteConfig(globalThis._importMeta_.env)
+    // just in-case, shouldn't be needed
+  });
+  const buildStack = config.stack || [];
+  buildStack.forEach((c) => siteConfig.push(c));
+  if (e.context._nitro.routeRules.site) {
+    siteConfig.push({
+      _context: "route-rules",
+      ...e.context._nitro.routeRules.site
+    });
+  }
+  if (config.multiTenancy) {
+    const host = parseURL(nitroOrigin).host;
+    const tenant = config.multiTenancy?.find((t) => t.hosts.includes(host));
+    if (tenant) {
+      siteConfig.push({
+        _context: `multi-tenancy:${host}`,
+        _priority: 0,
+        ...tenant.config
+      });
+    }
+  }
+  const ctx = { siteConfig, event: e };
+  await nitroApp.hooks.callHook("site-config:init", ctx);
+  e.context.siteConfig = ctx.siteConfig;
+  e.context._initedSiteConfig = true;
+});
+
+const _9wXirm = eventHandler(async (e) => {
+  const siteConfig = useSiteConfig(e);
+  const nitroOrigin = useNitroOrigin(e);
+  const runtimeConfig = useRuntimeConfig(e);
+  const stack = e.context.siteConfig.stack;
+  setHeader(e, "Content-Type", "application/json");
+  return {
+    config: siteConfig,
+    stack,
+    nitroOrigin,
+    version: runtimeConfig["nuxt-site-config"].version
+  };
+});
+
+function resolveSitePath(pathOrUrl, options) {
+  let path = pathOrUrl;
+  if (hasProtocol(pathOrUrl, { strict: false, acceptRelative: true })) {
+    const parsed = parseURL(pathOrUrl);
+    path = parsed.pathname;
+  }
+  const base = withLeadingSlash(options.base || "/");
+  if (base !== "/" && path.startsWith(base)) {
+    path = path.slice(base.length);
+  }
+  let origin = withoutTrailingSlash(options.siteUrl );
+  if (base !== "/" && origin.endsWith(base)) {
+    origin = origin.slice(0, origin.indexOf(base));
+  }
+  const baseWithOrigin = options.withBase ? withBase(base, origin || "/") : origin;
+  const resolvedUrl = withBase(path, baseWithOrigin);
+  return path === "/" && !options.withBase ? withTrailingSlash(resolvedUrl) : fixSlashes(options.trailingSlash, resolvedUrl);
+}
+const fileExtensions = [
+  // Images
+  "jpg",
+  "jpeg",
+  "png",
+  "gif",
+  "bmp",
+  "webp",
+  "svg",
+  "ico",
+  // Documents
+  "pdf",
+  "doc",
+  "docx",
+  "xls",
+  "xlsx",
+  "ppt",
+  "pptx",
+  "txt",
+  "md",
+  "markdown",
+  // Archives
+  "zip",
+  "rar",
+  "7z",
+  "tar",
+  "gz",
+  // Audio
+  "mp3",
+  "wav",
+  "flac",
+  "ogg",
+  "opus",
+  "m4a",
+  "aac",
+  "midi",
+  "mid",
+  // Video
+  "mp4",
+  "avi",
+  "mkv",
+  "mov",
+  "wmv",
+  "flv",
+  "webm",
+  // Web
+  "html",
+  "css",
+  "js",
+  "json",
+  "xml",
+  "tsx",
+  "jsx",
+  "ts",
+  "vue",
+  "svelte",
+  "xsl",
+  "rss",
+  "atom",
+  // Programming
+  "php",
+  "py",
+  "rb",
+  "java",
+  "c",
+  "cpp",
+  "h",
+  "go",
+  // Data formats
+  "csv",
+  "tsv",
+  "sql",
+  "yaml",
+  "yml",
+  // Fonts
+  "woff",
+  "woff2",
+  "ttf",
+  "otf",
+  "eot",
+  // Executables/Binaries
+  "exe",
+  "msi",
+  "apk",
+  "ipa",
+  "dmg",
+  "iso",
+  "bin",
+  // Scripts/Config
+  "bat",
+  "cmd",
+  "sh",
+  "env",
+  "htaccess",
+  "conf",
+  "toml",
+  "ini",
+  // Package formats
+  "deb",
+  "rpm",
+  "jar",
+  "war",
+  // E-books
+  "epub",
+  "mobi",
+  // Common temporary/backup files
+  "log",
+  "tmp",
+  "bak",
+  "old",
+  "sav"
+];
+function isPathFile(path) {
+  const lastSegment = path.split("/").pop();
+  const ext = (lastSegment || path).match(/\.[0-9a-z]+$/i)?.[0];
+  return ext && fileExtensions.includes(ext.replace(".", ""));
+}
+function fixSlashes(trailingSlash, pathOrUrl) {
+  const $url = parseURL(pathOrUrl);
+  if (isPathFile($url.pathname))
+    return pathOrUrl;
+  const fixedPath = trailingSlash ? withTrailingSlash($url.pathname) : withoutTrailingSlash($url.pathname);
+  return `${$url.protocol ? `${$url.protocol}//` : ""}${$url.host || ""}${fixedPath}${$url.search || ""}${$url.hash || ""}`;
+}
+
+function withSiteUrl(e, path, options = {}) {
+  const siteConfig = e.context.siteConfig?.get();
+  let siteUrl = e.context.siteConfigNitroOrigin;
+  if ((options.canonical !== false || false) && siteConfig.url)
+    siteUrl = siteConfig.url;
+  return resolveSitePath(path, {
+    siteUrl,
+    trailingSlash: siteConfig.trailingSlash,
+    base: e.context.nitro.baseURL,
+    withBase: options.withBase
+  });
+}
+
+const ROBOT_DIRECTIVE_VALUES = {
+  // Standard directives
+  enabled: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  disabled: "noindex, nofollow",
+  index: "index",
+  noindex: "noindex",
+  follow: "follow",
+  nofollow: "nofollow",
+  none: "none",
+  all: "all",
+  // Non-standard directives (not part of official robots spec)
+  noai: "noai",
+  noimageai: "noimageai"
+};
+function formatMaxImagePreview(value) {
+  return `max-image-preview:${value}`;
+}
+function formatMaxSnippet(value) {
+  return `max-snippet:${value}`;
+}
+function formatMaxVideoPreview(value) {
+  return `max-video-preview:${value}`;
+}
+
+function getSiteIndexable(e) {
+  const { env, indexable } = useSiteConfig(e);
+  if (typeof indexable !== "undefined")
+    return String(indexable) === "true";
+  return env === "production";
+}
+
+function getSiteRobotConfig(e) {
+  const query = getQuery$1(e);
+  const hints = [];
+  const { groups, debug } = useRuntimeConfigNuxtRobots(e);
+  let indexable = getSiteIndexable(e);
+  const queryIndexableEnabled = String(query.mockProductionEnv) === "true" || query.mockProductionEnv === "";
+  {
+    const { _context } = useSiteConfig(e, { debug: debug || true });
+    if (queryIndexableEnabled) {
+      indexable = true;
+      hints.push("You are mocking a production enviroment with ?mockProductionEnv query.");
+    } else if (!indexable && _context.indexable === "nuxt-robots:config") {
+      hints.push("You are blocking indexing with your Nuxt Robots config.");
+    } else if (!queryIndexableEnabled && !_context.indexable) {
+      hints.push(`Indexing is blocked in development. You can mock a production environment with ?mockProductionEnv query.`);
+    } else if (!indexable && !queryIndexableEnabled) {
+      hints.push(`Indexing is blocked by site config set by ${_context.indexable}.`);
+    } else if (indexable && !queryIndexableEnabled) {
+      hints.push(`Indexing is enabled from ${_context.indexable}.`);
+    }
+  }
+  if (groups.some((g) => g.userAgent.includes("*") && g.disallow.includes("/"))) {
+    indexable = false;
+    hints.push("You are blocking all user agents with a wildcard `Disallow /`.");
+  } else if (groups.some((g) => g.disallow.includes("/"))) {
+    hints.push("You are blocking specific user agents with `Disallow /`.");
+  }
+  return { indexable, hints };
+}
+
+const _Dsi74q = defineEventHandler(async (e) => {
+  const nitroApp = useNitroApp();
+  const { indexable, hints } = getSiteRobotConfig(e);
+  const { credits, isNuxtContentV2, cacheControl } = useRuntimeConfigNuxtRobots(e);
+  let robotsTxtCtx = {
+    sitemaps: [],
+    groups: [
+      {
+        allow: [],
+        comment: [],
+        userAgent: ["*"],
+        disallow: ["/"]
+      }
+    ]
+  };
+  if (indexable) {
+    robotsTxtCtx = await resolveRobotsTxtContext(e);
+    robotsTxtCtx.sitemaps = [...new Set(
+      asArray(robotsTxtCtx.sitemaps).map((s) => !s.startsWith("http") ? withSiteUrl(e, s, { withBase: true}) : s)
+    )];
+    if (isNuxtContentV2) {
+      const contentWithRobotRules = await e.$fetch("/__robots__/nuxt-content.json", {
+        headers: {
+          Accept: "application/json"
+        }
+      });
+      if (String(contentWithRobotRules).trim().startsWith("<!DOCTYPE")) {
+        logger.error("Invalid HTML returned from /__robots__/nuxt-content.json, skipping.");
+      } else {
+        for (const group of robotsTxtCtx.groups) {
+          if (group.userAgent.includes("*")) {
+            group.disallow.push(...contentWithRobotRules);
+            group.disallow = group.disallow.filter(Boolean);
+          }
+        }
+      }
+    }
+  }
+  let robotsTxt = generateRobotsTxt(robotsTxtCtx);
+  if (hints.length) {
+    robotsTxt += `
+# DEVELOPMENT HINTS:
+# - ${hints.join("\n# - ")}
+`;
+  }
+  if (credits) {
+    robotsTxt = [
+      `# START nuxt-robots (${indexable ? "indexable" : "indexing disabled"})`,
+      robotsTxt,
+      "# END nuxt-robots"
+    ].filter(Boolean).join("\n");
+  }
+  setHeader(e, "Content-Type", "text/plain; charset=utf-8");
+  setHeader(e, "Cache-Control", "no-store" );
+  const hookCtx = { robotsTxt, e };
+  await nitroApp.hooks.callHook("robots:robots-txt", hookCtx);
+  return hookCtx.robotsTxt;
+});
+
+function withoutQuery(path) {
+  return path.split("?")[0];
+}
+function createNitroRouteRuleMatcher(e) {
+  const { nitro, app } = useRuntimeConfig(e);
+  const _routeRulesMatcher = toRouteMatcher(
+    createRouter({
+      routes: Object.fromEntries(
+        Object.entries(nitro?.routeRules || {}).map(([path, rules]) => [withoutTrailingSlash(path), rules])
+      )
+    })
+  );
+  return (path) => {
+    return defu$1({}, ..._routeRulesMatcher.matchAll(
+      // radix3 does not support trailing slashes
+      withoutBase(withoutTrailingSlash(withoutQuery(path)), app.baseURL)
+    ).reverse());
+  };
+}
+
+function normaliseRobotsRouteRule(config) {
+  let allow;
+  if (typeof config.robots === "boolean")
+    allow = config.robots;
+  else if (typeof config.robots === "object" && "indexable" in config.robots && typeof config.robots.indexable !== "undefined")
+    allow = config.robots.indexable;
+  let rule;
+  if (typeof config.robots === "object" && config.robots !== null) {
+    if ("rule" in config.robots && typeof config.robots.rule !== "undefined") {
+      rule = config.robots.rule;
+    } else if (!("indexable" in config.robots)) {
+      const directives = [];
+      for (const [key, value] of Object.entries(config.robots)) {
+        if (value === false || value === null || value === void 0)
+          continue;
+        if (key in ROBOT_DIRECTIVE_VALUES && typeof value === "boolean" && value) {
+          directives.push(ROBOT_DIRECTIVE_VALUES[key]);
+        } else if (key === "max-image-preview" && typeof value === "string") {
+          directives.push(formatMaxImagePreview(value));
+        } else if (key === "max-snippet" && typeof value === "number") {
+          directives.push(formatMaxSnippet(value));
+        } else if (key === "max-video-preview" && typeof value === "number") {
+          directives.push(formatMaxVideoPreview(value));
+        }
+      }
+      if (directives.length > 0) {
+        rule = directives.join(", ");
+      }
+    }
+  } else if (typeof config.robots === "string") {
+    rule = config.robots;
+  }
+  if (rule && typeof allow === "undefined") {
+    const disallowIndicators = ["none", "noindex", "noai", "noimageai"];
+    allow = !disallowIndicators.some(
+      (indicator) => rule === indicator || rule.split(",").some((part) => part.trim() === indicator)
+    );
+  }
+  if (typeof allow === "undefined" && typeof rule === "undefined")
+    return;
+  return {
+    allow,
+    rule
+  };
+}
+
+function getPathRobotConfig(e, options) {
+  const runtimeConfig = useRuntimeConfig(e);
+  const { robotsDisabledValue, robotsEnabledValue, isNuxtContentV2 } = useRuntimeConfigNuxtRobots(e);
+  if (!options?.skipSiteIndexable) {
+    if (!getSiteRobotConfig(e).indexable) {
+      return {
+        rule: robotsDisabledValue,
+        indexable: false,
+        debug: {
+          source: "Site Config"
+        }
+      };
+    }
+  }
+  const path = options?.path || e.path;
+  let userAgent = options?.userAgent;
+  if (!userAgent) {
+    try {
+      userAgent = getRequestHeader(e, "User-Agent");
+    } catch {
+    }
+  }
+  const nitroApp = useNitroApp();
+  const groups = [
+    // run explicit user agent matching first
+    ...nitroApp._robots.ctx.groups.filter((g) => {
+      if (userAgent) {
+        return g.userAgent.some((ua) => ua.toLowerCase().includes(userAgent.toLowerCase()));
+      }
+      return false;
+    }),
+    // run wildcard matches second
+    ...nitroApp._robots.ctx.groups.filter((g) => g.userAgent.includes("*"))
+  ];
+  for (const group of groups) {
+    if (!group._indexable) {
+      return {
+        indexable: false,
+        rule: robotsDisabledValue,
+        debug: {
+          source: "/robots.txt",
+          line: `Disallow: /`
+        }
+      };
+    }
+    const robotsTxtRule = matchPathToRule(path, group._rules || []);
+    if (robotsTxtRule) {
+      if (!robotsTxtRule.allow) {
+        return {
+          indexable: false,
+          rule: robotsDisabledValue,
+          debug: {
+            source: "/robots.txt",
+            line: `Disallow: ${robotsTxtRule.pattern}`
+          }
+        };
+      }
+      break;
+    }
+  }
+  if (isNuxtContentV2 && nitroApp._robots?.nuxtContentUrls?.has(withoutTrailingSlash(path))) {
+    return {
+      indexable: false,
+      rule: robotsDisabledValue,
+      debug: {
+        source: "Nuxt Content"
+      }
+    };
+  }
+  nitroApp._robotsRuleMatcher = nitroApp._robotsRuleMatcher || createNitroRouteRuleMatcher(e);
+  let routeRulesPath = path;
+  if (runtimeConfig.public?.i18n?.locales) {
+    const { locales } = runtimeConfig.public.i18n;
+    const locale = locales.find((l) => routeRulesPath.startsWith(`/${l.code}`));
+    if (locale) {
+      routeRulesPath = routeRulesPath.replace(`/${locale.code}`, "");
+    }
+  }
+  const routeRules = normaliseRobotsRouteRule(nitroApp._robotsRuleMatcher(routeRulesPath));
+  if (routeRules && (typeof routeRules.allow !== "undefined" || typeof routeRules.rule !== "undefined")) {
+    return {
+      indexable: routeRules.allow ?? false,
+      rule: routeRules.rule || (routeRules.allow ? robotsEnabledValue : robotsDisabledValue),
+      debug: {
+        source: "Route Rules"
+      }
+    };
+  }
+  return {
+    indexable: true,
+    rule: robotsEnabledValue
+  };
+}
+
+const _SYXRVA = defineEventHandler(async (e) => {
+  if (e.path === "/robots.txt" || e.path.startsWith("/__") || e.path.startsWith("/api") || e.path.startsWith("/_nuxt"))
+    return;
+  const nuxtRobotsConfig = useRuntimeConfigNuxtRobots(e);
+  if (nuxtRobotsConfig) {
+    const { header } = nuxtRobotsConfig;
+    const robotConfig = getPathRobotConfig(e, { skipSiteIndexable: Boolean(getQuery$1(e)?.mockProductionEnv) });
+    if (header) {
+      setHeader(e, "X-Robots-Tag", robotConfig.rule);
+    }
+    e.context.robots = robotConfig;
+  }
+});
+
+const __Ailyl = defineEventHandler(async (e) => {
+  const runtimeConfig = useRuntimeConfigNuxtRobots(e);
+  const { indexable, hints } = getSiteRobotConfig(e);
+  const siteConfig = useSiteConfig(e);
+  const robotsTxt = await e.$fetch("/robots.txt", {
+    query: getQuery$1(e)
+  });
+  return {
+    robotsTxt,
+    indexable,
+    hints,
+    runtimeConfig,
+    siteConfig: {
+      url: siteConfig.url,
+      env: siteConfig.env,
+      indexable: siteConfig.indexable
+    }
+  };
+});
+
+const _FL0zMr = defineEventHandler(async (e) => {
+  const query = getQuery$1(e);
+  const path = query.path;
+  delete query.path;
+  const res = await $fetch.raw(withQuery(path, query));
+  const html = res._data;
+  const robotsHeader = String(res.headers.get("x-robots-tag"));
+  const robotsMeta = String(html).match(/<meta[^>]+name=["']robots["'][^>]+content=["']([^"']+)["'](?:[^>]+data-hint=["']([^"']+)["'])?[^>]*>/i);
+  const [, robotsContent = null, robotsHint = null] = robotsMeta || [];
+  const [source, line] = robotsHint ? robotsHint.split(",") : [null, null];
+  return {
+    rule: robotsContent,
+    indexable: !(robotsContent?.includes("noindex") && robotsHeader?.includes("noindex")),
+    crawlable: !(source === "/robots.txt"),
+    path,
+    debug: {
+      source,
+      line
+    },
+    robotsHeader,
+    robotsContent
+  };
 });
 
 const VueResolver = (_, value) => {
@@ -1553,6 +2697,12 @@ const _lazy_hEvbgA = () => Promise.resolve().then(function () { return renderer$
 const handlers = [
   { route: '', handler: _28IEIe, lazy: false, middleware: true, method: undefined },
   { route: '/__nuxt_error', handler: _lazy_hEvbgA, lazy: true, middleware: false, method: undefined },
+  { route: '', handler: _w3OoJb, lazy: false, middleware: true, method: undefined },
+  { route: '/__site-config__/debug.json', handler: _9wXirm, lazy: false, middleware: false, method: undefined },
+  { route: '/robots.txt', handler: _Dsi74q, lazy: false, middleware: false, method: undefined },
+  { route: '', handler: _SYXRVA, lazy: false, middleware: true, method: undefined },
+  { route: '/__robots__/debug.json', handler: __Ailyl, lazy: false, middleware: false, method: undefined },
+  { route: '/__robots__/debug-path.json', handler: _FL0zMr, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_hEvbgA, lazy: true, middleware: false, method: undefined }
 ];
@@ -1694,6 +2844,10 @@ function useNitroApp() {
   return nitroApp$1;
 }
 runNitroPlugins(nitroApp$1);
+
+function defineNitroPlugin(def) {
+  return def;
+}
 
 function defineRenderHandler(render) {
   const runtimeConfig = useRuntimeConfig();
