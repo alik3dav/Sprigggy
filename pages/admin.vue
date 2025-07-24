@@ -9,6 +9,10 @@
       Logout
     </button>
 
+    <!-- Success & Error Messages -->
+    <div v-if="success" class="text-green-600 font-medium">{{ success }}</div>
+    <div v-if="error" class="text-red-600 font-medium">{{ error }}</div>
+
     <AssetTable :assets="assets" @edit="startEdit" @delete="deleteAsset" />
 
     <hr class="my-6" />
@@ -16,6 +20,7 @@
     <AssetForm
       v-model="form"
       :isEditing="isEditing"
+      :loading="loadingSubmit"
       @submit="handleSubmit"
       @cancel="cancelEdit"
     />
@@ -25,7 +30,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-import { useSupabaseClient } from '@supabase/auth-helpers-vue';
+
 
 import AssetTable from '~/components/AssetTable.vue';
 import AssetForm from '~/components/AssetForm.vue';
@@ -51,9 +56,7 @@ const isEditing = ref(false);
 const editId = ref(null);
 
 onMounted(async () => {
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { data: { user } } = await supabase.auth.getUser();
   if (!user) return router.push('/login');
   await fetchAssets();
 });
@@ -63,6 +66,7 @@ async function fetchAssets() {
     .from('assets')
     .select('*')
     .order('date', { ascending: false });
+
   if (err) {
     error.value = 'Failed to fetch assets';
     console.error(err);
@@ -70,6 +74,7 @@ async function fetchAssets() {
     assets.value = data;
   }
 }
+
 function startEdit(asset) {
   isEditing.value = true;
   editId.value = asset.id;
@@ -77,7 +82,6 @@ function startEdit(asset) {
   error.value = '';
   success.value = '';
 }
-
 
 function cancelEdit() {
   isEditing.value = false;
@@ -91,9 +95,11 @@ function resetForm() {
   form.value = {
     title: '',
     type: '',
-    download_url: '',
-    provider: '',
+    tags: '',
     description: '',
+    provider: '',
+    download_url: '',
+    image: '',
   };
 }
 
@@ -102,23 +108,25 @@ async function handleSubmit(submittedForm) {
   success.value = '';
   loadingSubmit.value = true;
 
-  try {
-    const assetData = {
-      ...submittedForm,
-      date: new Date().toISOString(),
-    };
+  const assetData = {
+    ...submittedForm,
+    date: new Date().toISOString(),
+  };
 
+  try {
     if (isEditing.value) {
       const { error: updateError } = await supabase
         .from('assets')
         .update(assetData)
         .eq('id', editId.value);
+
       if (updateError) throw updateError;
       success.value = 'Asset updated successfully';
     } else {
       const { error: insertError } = await supabase
         .from('assets')
         .insert([assetData]);
+
       if (insertError) throw insertError;
       success.value = 'Asset added successfully';
     }
@@ -133,46 +141,20 @@ async function handleSubmit(submittedForm) {
   }
 }
 
-
-  try {
-    if (isEditing.value) {
-      const { error: updateError } = await supabase
-        .from('assets')
-        .update(assetData)
-        .eq('id', editId.value);
-      if (updateError) throw updateError;
-      success.value = 'Asset updated successfully';
-    } else {
-      const { error: insertError } = await supabase
-        .from('assets')
-        .insert([assetData]);
-      if (insertError) throw insertError;
-      success.value = 'Asset added successfully';
-    }
-
-    await fetchAssets();
-    resetForm();
-    isEditing.value = false;
-    editId.value = null;
-  } catch (err) {
-    error.value = 'Save failed: ' + err.message;
-    console.error('Failed to save asset:', err);
-  } finally {
-    loadingSubmit.value = false;
-  }
-}
-
 async function deleteAsset(id) {
   if (!confirm('Are you sure you want to delete this asset?')) return;
+
   const { error: deleteError } = await supabase
     .from('assets')
     .delete()
     .eq('id', id);
+
   if (deleteError) {
     error.value = 'Failed to delete asset';
     console.error(deleteError);
     return;
   }
+
   success.value = 'Asset deleted';
   await fetchAssets();
 }

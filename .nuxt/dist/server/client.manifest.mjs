@@ -1,1 +1,1 @@
-export { default } from "file:///home/projects/nuxt-starter-wgfndmem/node_modules/.pnpm/@nuxt+vite-builder@3.17.7_typescript@5.8.3_vue@3.5.17/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
+export { default } from "file:///home/alik3dav/ZippyKit/node_modules/.pnpm/@nuxt+vite-builder@3.17.7_typescript@5.8.3_vue@3.5.17/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
