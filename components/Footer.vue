@@ -7,10 +7,9 @@
         © {{ new Date().getFullYear() }} Zippykit. All rights reserved.
       </div>
       <div class="flex flex-wrap justify-center gap-4">
-        <a href="#" class="hover:text-black transition">About</a>
-        <a href="#" class="hover:text-black transition">Terms</a>
-        <a href="#" class="hover:text-black transition">Privacy</a>
-        <a href="#" class="hover:text-black transition">Contact</a>
+        <a href="/about" class="hover:text-black transition">About</a>
+        <a href="/dmca" class="hover:text-black transition">DMCA Policy</a>
+        <a href="/privacy" class="hover:text-black transition">Privacy</a>
       </div>
     </div>
   </footer>
