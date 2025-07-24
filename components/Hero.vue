@@ -14,7 +14,7 @@
 
       <NuxtLink to="/collections" class="inline-block">
         <button
-          class="bg-white/10 backdrop-blur-sm border border-zinc-300 text-zinc-800 font-semibold text-sm sm:text-base px-6 sm:px-8 py-3 rounded-full shadow hover:shadow-lg hover:bg-white transition-all"
+          class="bg-white/10 backdrop-blur-sm border border-zinc-300 text-zinc-800 font-semibold text-sm sm:text-base px-6 sm:px-8 py-3 rounded-full shadow hover:shadow-md hover:bg-white transition-all"
         >
           🎨 Browse Collections
         </button>

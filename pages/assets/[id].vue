@@ -139,7 +139,7 @@ watch(asset, (val) => {
 <template>
   <div class="max-w-6xl mt-24 mx-auto p-4 space-y-8">
     <div
-      class="bg-slate-50 rounded-lg p-8 grid grid-cols-1 lg:grid-cols-3 gap-10"
+      class="border border-slate-100 rounded-lg p-8 grid grid-cols-1 lg:grid-cols-3 gap-10"
     >
       <!-- Left Column: Image + Description -->
       <div class="lg:col-span-2 space-y-6">
@@ -215,7 +215,7 @@ watch(asset, (val) => {
             <div
               v-for="item in relatedAssets"
               :key="item.id"
-              class="flex items-center gap-3 hover:bg-gray-100 p-2 rounded cursor-pointer"
+              class="flex items-center gap-3 hover:bg-slate-50 p-2 rounded cursor-pointer"
             >
               <img
                 :src="item.image"
@@ -226,7 +226,7 @@ watch(asset, (val) => {
               <div>
                 <a
                   :href="`/assets/${item.id}`"
-                  class="font-medium text-blue-600 hover:underline"
+                  class="font-medium text-blue-600"
                 >
                   {{ item.title }}
                 </a>

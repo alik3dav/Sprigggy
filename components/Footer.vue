@@ -5,7 +5,7 @@
     >
       <!-- Left: Copyright -->
       <div class="text-center md:text-left text-gray-400 font-light select-none tracking-wide">
-        © {{ new Date().getFullYear() }} Zippykit. All rights reserved.
+        © {{ new Date().getFullYear() }} Sprigggy. All rights reserved.
       </div>
 
       <!-- Middle: Stats -->

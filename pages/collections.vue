@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-6xl mx-auto mt-24 p-4 space-y-8">
+  <div class="w-full p-24 space-y-8 mt-24 ">
     <h1 class="text-2xl font-bold">All Assets</h1>
 
     <!-- Filters -->

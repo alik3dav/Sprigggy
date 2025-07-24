@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-white border border-slate-200 rounded-lg overflow-hidden flex flex-col">
+  <div class="bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden flex flex-col">
     <NuxtLink :to="link">
-      <img :src="image" alt="" class="w-full h-50 object-cover" />
+      <img :src="image" alt="" class="w-full object-cover" />
     </NuxtLink>
 
     <!-- flex-1 makes this container fill available height -->
@@ -20,7 +20,7 @@
       <!-- Meta info always sticks to bottom -->
       <div class="space-y-2 mt-2">
         <div class="flex flex-wrap items-center gap-2 text-xs text-gray-500">
-          <span class="bg-gray-100 text-gray-700 px-2 py-0.5 rounded">
+          <span class="bg-gray-100 text-gray-700 text-[11px] px-4 py-1 rounded-full">
             {{ type }}
           </span>
         </div>
@@ -29,7 +29,7 @@
           <span
             v-for="tag in tags"
             :key="tag"
-            class="bg-blue-100 text-blue-700 text-[11px] px-2 py-0.5 rounded"
+            class="bg-blue-100 text-blue-700 text-[11px] px-4 py-0.2 rounded-full"
           >
             {{ tag }}
           </span>

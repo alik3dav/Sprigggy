@@ -52,7 +52,7 @@ watch(() => [props.tags, props.type], fetchRelated, { immediate: true })
       <div
         v-for="item in relatedAssets"
         :key="item.id"
-        class="flex items-center gap-3 hover:bg-gray-100 p-2 rounded cursor-pointer"
+        class="flex items-center gap-2 cursor-pointer transition"
       >
         <img
           :src="item.image"
@@ -63,7 +63,7 @@ watch(() => [props.tags, props.type], fetchRelated, { immediate: true })
         <div>
           <NuxtLink
             :to="`/assets/${item.id}`"
-            class="font-medium text-blue-600 hover:underline"
+            class="font-medium text-blue-600"
           >
             {{ item.title }}
           </NuxtLink>
