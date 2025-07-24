@@ -10,44 +10,75 @@ const user = useSupabaseUser();
 const email = ref('');
 const password = ref('');
 const error = ref('');
+const loading = ref(false);
 
 // Redirect if already logged in
-watch(user, (u) => {
-  if (u) router.push('/admin');
-});
+watch(
+  user,
+  (u) => {
+    if (u) router.push('/admin');
+  },
+  { immediate: true } // so it runs on initial load
+);
 
 const login = async () => {
   error.value = '';
-  const { error: loginError } = await supabase.auth.signInWithPassword({
-    email: email.value,
-    password: password.value,
-  });
-  if (loginError) error.value = loginError.message;
-  else router.push('/admin');
+  loading.value = true;
+  try {
+    const { error: loginError } = await supabase.auth.signInWithPassword({
+      email: email.value,
+      password: password.value,
+    });
+
+    if (loginError) {
+      error.value = loginError.message;
+      loading.value = false;
+      return;
+    }
+
+    // Wait a tiny bit for user state to update then redirect
+    // Optional: you can do a check here or rely on the watcher
+    router.push('/admin');
+  } catch (err) {
+    error.value = 'Unexpected error occurred';
+    console.error(err);
+  } finally {
+    loading.value = false;
+  }
 };
 </script>
 
 <template>
-  <div class="max-w-md mx-auto p-6">
-    <h1 class="text-2xl font-bold mb-4">Login</h1>
+  <div class="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md mt-24">
+    <h1 class="text-2xl font-bold mb-6 text-center">Login to Zippykit</h1>
+
     <input
       v-model="email"
       type="email"
       placeholder="Email"
-      class="w-full mb-3 p-2 border rounded"
+      class="w-full mb-4 p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+      :disabled="loading"
+      autocomplete="username"
     />
+
     <input
       v-model="password"
       type="password"
       placeholder="Password"
-      class="w-full mb-3 p-2 border rounded"
+      class="w-full mb-4 p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+      :disabled="loading"
+      autocomplete="current-password"
     />
+
     <button
       @click="login"
-      class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+      :disabled="loading"
+      class="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
     >
-      Log In
+      <span v-if="loading">Logging in...</span>
+      <span v-else>Log In</span>
     </button>
-    <p v-if="error" class="mt-2 text-red-600">{{ error }}</p>
+
+    <p v-if="error" class="mt-4 text-red-600 text-center">{{ error }}</p>
   </div>
 </template>

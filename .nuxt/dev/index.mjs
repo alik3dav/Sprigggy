@@ -4772,7 +4772,7 @@ const sources$1 = [
                 "loc": "/login"
             },
             {
-                "loc": "/contact"
+                "loc": "/privacy"
             },
             {
                 "loc": "/collections"
