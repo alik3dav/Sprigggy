@@ -130,28 +130,22 @@ watch(
   }
 );
 
-function handleFileChange(event) {
-  const file = event.target.files[0];
+async function handleFileChange(e) {
+  const file = e.target.files[0];
   if (!file) return;
-
   uploading.value = true;
   const fileName = `${Date.now()}_${file.name}`;
   const filePath = `assets/${fileName}`;
-
-  supabase.storage
-    .from('assets')
-    .upload(filePath, file)
-    .then(({ error }) => {
-      if (error) {
-        alert('Image upload failed');
-        uploading.value = false;
-        return;
-      }
-      const { data } = supabase.storage.from('assets').getPublicUrl(filePath);
-      localForm.value.image = data.publicUrl;
-      emit('update:modelValue', localForm.value);
-      uploading.value = false;
-    });
+  const { error } = await supabase.storage.from('assets').upload(filePath, file);
+  if (error) {
+    // replace alert with a nicer UI notification
+    console.error('Image upload failed', error);
+  } else {
+    const { data } = supabase.storage.from('assets').getPublicUrl(filePath);
+    localForm.value.image = data.publicUrl;
+    emit('update:modelValue', localForm.value);
+  }
+  uploading.value = false;
 }
 
 function onSubmit() {

@@ -108,8 +108,14 @@ async function handleSubmit(submittedForm) {
   success.value = '';
   loadingSubmit.value = true;
 
+  // Convert tags string to array (e.g., "ui, branding" → ["ui", "branding"])
+  const tagsArray = typeof submittedForm.tags === 'string'
+    ? submittedForm.tags.split(',').map(t => t.trim()).filter(Boolean)
+    : [];
+
   const assetData = {
     ...submittedForm,
+    tags: tagsArray, // ✅ override tags with array
     date: new Date().toISOString(),
   };
 
@@ -140,6 +146,7 @@ async function handleSubmit(submittedForm) {
     loadingSubmit.value = false;
   }
 }
+
 
 async function deleteAsset(id) {
   if (!confirm('Are you sure you want to delete this asset?')) return;
