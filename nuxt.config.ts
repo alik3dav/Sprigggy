@@ -18,7 +18,7 @@ export default defineNuxtConfig({
       // Dynamically generate asset URLs from Supabase
       const client = useSupabaseClient()
       const { data } = await client.from('assets').select('id')
-      return data.map((asset) => `/asset/${asset.id}`)
+      return data.map((asset) => `/assets/${asset.id}`)
     },
   },
   // No 'plugins' array here for Tailwind plugins!

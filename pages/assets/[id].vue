@@ -119,7 +119,7 @@ watch(asset, (val) => {
       },
       {
         property: 'og:url',
-        content: `https://zippykit.com/asset/${val.id}`,
+        content: `https://zippykit.com/assets/${val.id}`,
       },
       {
         name: 'twitter:card',
@@ -129,7 +129,7 @@ watch(asset, (val) => {
     link: [
       {
         rel: 'canonical',
-        href: `https://zippykit.com/asset/${val.id}`,
+        href: `https://zippykit.com/assets/${val.id}`,
       },
     ],
   })
@@ -225,7 +225,7 @@ watch(asset, (val) => {
               />
               <div>
                 <a
-                  :href="`/asset/${item.id}`"
+                  :href="`/assets/${item.id}`"
                   class="font-medium text-blue-600 hover:underline"
                 >
                   {{ item.title }}
