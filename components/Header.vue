@@ -1,16 +1,16 @@
 <template>
   <header class="bg-white   border-gray-200">
     <div
-      class="max-w-6xl mx-auto px-4 py-5 flex items-center justify-between gap-6"
+      class="max-w-6xl mx-auto px-4 py-8 flex items-center justify-between gap-6"
     >
       <!-- Left: Logo -->
       <NuxtLink
         to="/"
         class="flex items-center space-x-3"
-        aria-label="ZippyKit Home"
+        aria-label="Sprigggy Home"
       >
-        <img src="/zippykit.png" alt="ZippyKit logo" class="w-24 h-auto" />
-        <span class="sr-only">ZippyKit</span>
+        <img src="/sprigggy.png" alt="Sprigggy logo" class="w-24 h-auto" />
+        <span class="sr-only">Sprigggy</span>
       </NuxtLink>
 
       <!-- Center: Search (hidden on small) -->
