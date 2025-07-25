@@ -735,8 +735,6 @@ const _inlineRuntimeConfig = {
         "include": [],
         "exclude": [
           "/_**",
-          "/_nuxt/**",
-          "/_nuxt/**",
           "/_nuxt/**"
         ],
         "includeAppSources": true
@@ -768,16 +766,26 @@ const _inlineRuntimeConfig = {
     "credits": true,
     "groups": [
       {
-        "comment": [],
-        "disallow": [],
-        "allow": [
-          "/"
-        ],
         "userAgent": [
           "*"
         ],
+        "disallow": [
+          "/admin",
+          "/api"
+        ],
+        "allow": [
+          "/"
+        ],
         "_indexable": true,
         "_rules": [
+          {
+            "pattern": "/admin",
+            "allow": false
+          },
+          {
+            "pattern": "/api",
+            "allow": false
+          },
           {
             "pattern": "/",
             "allow": true
@@ -786,41 +794,31 @@ const _inlineRuntimeConfig = {
       },
       {
         "comment": [],
-        "disallow": [],
+        "disallow": [
+          "['/admin', '/api'],"
+        ],
         "allow": [
-          "/"
+          "'/',"
         ],
         "userAgent": [
-          "*"
+          "'*',"
         ],
         "_indexable": true,
         "_rules": [
           {
-            "pattern": "/",
-            "allow": true
-          }
-        ]
-      },
-      {
-        "comment": [],
-        "disallow": [],
-        "allow": [
-          "/"
-        ],
-        "userAgent": [
-          "*"
-        ],
-        "_indexable": true,
-        "_rules": [
+            "pattern": "['/admin', '/api'],",
+            "allow": false
+          },
           {
-            "pattern": "/",
+            "pattern": "'/',",
             "allow": true
           }
         ]
       }
     ],
     "sitemap": [
-      "https://zippykit.vercel.app/sitemap.xml",
+      "https://sprigggy.com/sitemap.xml",
+      "'https://sprigggy.com/sitemap.xml',",
       "/sitemap.xml"
     ],
     "header": true,

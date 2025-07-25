@@ -1,6 +1,4 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/supabase', '@nuxtjs/robots','@nuxtjs/sitemap'],
   supabase: {
@@ -9,12 +7,13 @@ export default defineNuxtConfig({
     redirect: false,
   },
   robots: {
-    UserAgent: '*',
-    Disallow: '',
+    useragent: '*',
+    allow: '/',
+    disallow: ['/admin', '/api'],
+    sitemap: 'https://sprigggy.com/sitemap.xml',
   },
-  
   sitemap: {
-    siteUrl: 'https://sprigggy.com', // or your actual domain
+    siteUrl: 'https://sprigggy.com',
     trailingSlash: false,
     routes: async () => {
       const client = useSupabaseClient();
@@ -22,8 +21,6 @@ export default defineNuxtConfig({
       return data ? data.map((asset) => `/assets/${asset.id}`) : [];
     },
   },
-  // No 'plugins' array here for Tailwind plugins!
-
   app: {
     head: {
       titleTemplate: '%s | Sprigggy',
@@ -34,7 +31,6 @@ export default defineNuxtConfig({
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'Sprigggy' },
         { property: 'og:url', content: 'https://sprigggy.com' },
-        // Add more defaults or canonical here if needed
       ],
       link: [
         {
@@ -45,6 +41,4 @@ export default defineNuxtConfig({
       ],
     },
   },
-  
-  
 });

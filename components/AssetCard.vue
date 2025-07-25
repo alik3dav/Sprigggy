@@ -1,52 +1,55 @@
 <template>
-  <div class="bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden flex flex-col">
-    <NuxtLink :to="link">
-      <img :src="image" alt="" class="w-full object-cover" />
-    </NuxtLink>
+  <div>
+    <div class="relative rounded-lg overflow-hidden duration-300 aspect-[4/3]">
+      <NuxtLink :to="link" class="block group h-full w-full">
+        <img
+          :src="image"
+          alt=""
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
 
-    <!-- flex-1 makes this container fill available height -->
-    <div class="flex flex-col flex-1 p-4">
-      <!-- Title -->
-      <NuxtLink
-        :to="link"
-        class="block font-semibold text-gray-800 hover:text-blue-600 text-sm leading-tight line-clamp-2 mb-3"
-      >
-        {{ title }}
+        <!-- Title overlay on hover -->
+        <div
+          class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 py-3"
+        >
+          <h3
+            class="text-white font-medium text-base truncate"
+            :title="title"
+          >
+            {{ title }}
+          </h3>
+        </div>
       </NuxtLink>
+    </div>
 
-      <!-- Spacer pushes the below section to the bottom -->
-      <div class="flex-grow"></div>
-
-      <!-- Meta info always sticks to bottom -->
-      <div class="space-y-2 mt-2">
-        <div class="flex flex-wrap items-center gap-2 text-xs text-gray-500">
-          <span class="bg-gray-100 text-gray-700 text-[11px] px-4 py-1 rounded-full">
-            {{ type }}
-          </span>
-        </div>
-
-        <div class="flex flex-wrap gap-1">
-          <span
-            v-for="tag in tags"
-            :key="tag"
-            class="bg-blue-100 text-blue-700 text-[11px] px-4 py-0.2 rounded-full"
-          >
-            {{ tag }}
-          </span>
-        </div>
-
-        <div class="flex text-xs text-gray-400">
-          <span>Added: {{ formatDate(date) }}</span>
-          <span class="ml-auto"
-            >{{ downloads.toLocaleString() }} downloads</span
-          >
-        </div>
+    <div class="flex items-center justify-between h-8 mt-2 px-1">
+      <div class="flex gap-2 overflow-hidden whitespace-nowrap text-xs text-gray-700">
+        <span class="bg-gray-100 rounded-full px-2 py-0.5">{{ type }}</span>
+        <span
+          v-for="tag in tags"
+          :key="tag"
+          class="bg-blue-100 text-blue-700 rounded-full px-2 py-0.5"
+        >
+          {{ tag }}
+        </span>
       </div>
+      <div class="flex items-center gap-1 text-xs text-gray-500 whitespace-nowrap">
+       <Download class="w-4 h-4 text-gray-400" />
+       <span>{{ downloads.toLocaleString() }} downloads</span>
+     </div>
+
     </div>
   </div>
 </template>
 
+
+
+
 <script setup>
+import { Download } from 'lucide-vue-next';
+
+
+
 defineProps({
   title: String,
   type: String,

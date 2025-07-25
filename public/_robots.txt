@@ -1,4 +1,6 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://sprigggy.com/sitemap.xml
+robots: {
+  useragent: '*',
+  allow: '/',
+  disallow: ['/admin', '/api'],
+  sitemap: 'https://sprigggy.com/sitemap.xml',
+},
