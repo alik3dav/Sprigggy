@@ -4,7 +4,7 @@
 
 
 <!-- Filters -->
-<div class="flex flex-wrap gap-3 items-center border-b border-gray-200 pb-4 text-sm">
+<div class="flex flex-wrap gap-3 items-center border-b border-gray-200 pb-4 text-sm z-30">
   <!-- Category Dropdown -->
   <Listbox v-model="selectedCategory" as="div" class="relative w-48">
     <ListboxButton
@@ -31,7 +31,7 @@
   </Listbox>
 
   <!-- Tag Dropdown -->
-  <Listbox v-model="selectedTag" as="div" class="relative w-48">
+  <Listbox v-model="selectedTag" as="div" class="relative w-48 z-30">
     <ListboxButton
       class="w-full rounded-full bg-white border border-gray-300 text-gray-700 px-4 py-2 pr-10 text-sm shadow-sm hover:border-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500"
     >
@@ -56,7 +56,7 @@
   </Listbox>
 
   <!-- Sort Dropdown -->
-  <Listbox v-model="sortOrder" as="div" class="relative w-48">
+  <Listbox v-model="sortOrder" as="div" class="relative w-48 z-30">
     <ListboxButton
       class="w-full rounded-full bg-white border border-gray-300 text-gray-700 px-4 py-2 pr-10 text-sm shadow-sm hover:border-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500"
     >
