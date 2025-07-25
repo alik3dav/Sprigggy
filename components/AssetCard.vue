@@ -40,12 +40,12 @@
     <!-- Metadata: type, tags, downloads -->
     <div class="flex items-center justify-between h-8 mt-2 px-1">
       <div class="flex gap-2 overflow-hidden whitespace-nowrap text-xs text-gray-700">
-        <span class="bg-gray-100 rounded-full px-3 py-1.5">{{ type }}</span>
+        <span class="bg-gray-100 text-[9px] rounded-full px-3 py-1">{{ type }}</span>
 
         <span
           v-for="tag in tags"
           :key="tag"
-          class="bg-blue-100 text-blue-700 rounded-full px-3 py-1.5"
+          class="bg-blue-100 text-[9px] text-blue-700 rounded-full px-3 py-1"
         >
           {{ tag }}
         </span>
@@ -53,7 +53,7 @@
 
       <div class="flex items-center gap-1 text-xs text-gray-500 whitespace-nowrap">
         <Download class="w-4 h-4 text-gray-400" />
-        <span>{{ downloads.toLocaleString() }} downloads</span>
+        <span>{{ downloads.toLocaleString() }}</span>
       </div>
     </div>
   </div>
