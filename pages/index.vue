@@ -34,29 +34,33 @@ onMounted(async () => {
 });
 
 useHead({
-  title: 'Free Design Assets & Templates | ZippyKit',
+  title: 'Sprigggy – Free Open Source Design Assets',
   meta: [
     {
       name: 'description',
-      content: 'Download free design templates, plugins, mockups and more. Curated and useful assets for creatives.',
+      content:
+        'Sprigggy offers beautiful, free, and open-source design assets — from templates to 3D elements. Perfect for creatives, developers, and makers.',
     },
     {
       name: 'keywords',
-      content: 'free design templates, figma files, ui kits, mockups, zippykit, design tools',
+      content:
+        'free design assets, open source templates, figma ui kits, 3d assets, sprigggy, design tools, creative resources, open design',
     },
-    { property: 'og:title', content: 'ZippyKit – Free Design Assets' },
+    { property: 'og:title', content: 'Sprigggy – Free Design Assets' },
     {
       property: 'og:description',
-      content: 'Explore a curated library of free design tools, templates, and plugins.',
+      content:
+        'Explore a curated, open-source library of creative tools, templates, 3D files and more — all free, forever.',
     },
     {
       property: 'og:image',
-      content: 'https://zippykit.com/og-image.jpg', // Replace with your actual image
+      content: 'https://sprigggy.com/og-image.jpg', // Replace with your real OG image URL
     },
-    { property: 'og:url', content: 'https://zippykit.com' },
+    { property: 'og:url', content: 'https://sprigggy.com' },
     { name: 'twitter:card', content: 'summary_large_image' },
   ],
-  link: [{ rel: 'canonical', href: 'https://zippykit.com' }],
-})
+  link: [{ rel: 'canonical', href: 'https://sprigggy.com' }],
+});
+
 
 </script>

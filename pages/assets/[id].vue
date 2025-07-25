@@ -99,40 +99,41 @@ watch(asset, (val) => {
   if (!val) return
 
   useHead({
-    title: `${val.title} | ZippyKit`,
-    meta: [
-      {
-        name: 'description',
-        content: val.description?.slice(0, 160) || 'Free design asset from ZippyKit.',
-      },
-      {
-        property: 'og:title',
-        content: `${val.title} | ZippyKit`,
-      },
-      {
-        property: 'og:description',
-        content: val.description?.slice(0, 160) || '',
-      },
-      {
-        property: 'og:image',
-        content: val.image || 'https://zippykit.com/default-og.jpg', // fallback
-      },
-      {
-        property: 'og:url',
-        content: `https://zippykit.com/assets/${val.id}`,
-      },
-      {
-        name: 'twitter:card',
-        content: 'summary_large_image',
-      },
-    ],
-    link: [
-      {
-        rel: 'canonical',
-        href: `https://zippykit.com/assets/${val.id}`,
-      },
-    ],
-  })
+  title: `${val.title} | Sprigggy`,
+  meta: [
+    {
+      name: 'description',
+      content: val.description?.slice(0, 160) || 'Free design asset from Sprigggy.',
+    },
+    {
+      property: 'og:title',
+      content: `${val.title} | Sprigggy`,
+    },
+    {
+      property: 'og:description',
+      content: val.description?.slice(0, 160) || 'Browse beautiful, free open-source design assets.',
+    },
+    {
+      property: 'og:image',
+      content: val.image || 'https://sprigggy.com/default-og.jpg', // change this to your real image
+    },
+    {
+      property: 'og:url',
+      content: `https://sprigggy.com/assets/${val.id}`,
+    },
+    {
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://sprigggy.com/assets/${val.id}`,
+    },
+  ],
+});
+
 })
 </script>
 
