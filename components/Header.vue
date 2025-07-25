@@ -17,7 +17,7 @@
         <NuxtLink
           to="/"
           class="relative group transition-colors"
-          active-class="text-black font-semibold"
+          active-class="text-black font-medium"
           exact
         >
           Home
@@ -26,7 +26,7 @@
         <NuxtLink
           to="/collections"
           class="relative group transition-colors"
-          active-class="text-black font-semibold"
+          active-class="text-black font-medium"
         >
           Collections
           <span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-black transition-all duration-300 group-hover:w-full"></span>
@@ -34,7 +34,7 @@
         <NuxtLink
           to="/about"
           class="relative group transition-colors"
-          active-class="text-black font-semibold"
+          active-class="text-black font-medium"
         >
           About
           <span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-black transition-all duration-300 group-hover:w-full"></span>

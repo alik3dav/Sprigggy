@@ -11,16 +11,22 @@
       <!-- Right: Links -->
       <nav class="flex gap-6 text-gray-500 font-medium">
         <NuxtLink
-          to="/about"
+          to="/terms"
           class="hover:text-black transition-colors relative after:content-[''] after:absolute after:-bottom-0.5 after:left-0 after:w-0 after:h-[1.5px] after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full"
         >
-          About
+          Terms
         </NuxtLink>
         <NuxtLink
-          to="/collections"
+          to="/privacy"
           class="hover:text-black transition-colors relative after:content-[''] after:absolute after:-bottom-0.5 after:left-0 after:w-0 after:h-[1.5px] after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full"
         >
-          Collections
+          Privacy
+        </NuxtLink>
+        <NuxtLink
+          to="/cookies"
+          class="hover:text-black transition-colors relative after:content-[''] after:absolute after:-bottom-0.5 after:left-0 after:w-0 after:h-[1.5px] after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full"
+        >
+          Cookies
         </NuxtLink>
       </nav>
     </div>
