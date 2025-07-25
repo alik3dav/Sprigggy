@@ -49,14 +49,16 @@ const login = async () => {
 </script>
 
 <template>
-  <div class="max-w-md mx-auto p-6 mt-24">
-    <h1 class="text-2xl font-bold mb-6 text-center">Login to Sprigggy</h1>
+  <div class="max-w-md mx-auto p-8 mt-24 bg-white rounded-lg shadow-md">
+    <h1 class="text-3xl font-extrabold mb-8 text-center text-sky-900">
+      Login to Sprigggy
+    </h1>
 
     <input
       v-model="email"
       type="email"
       placeholder="Email"
-      class="w-full mb-4 px-6 py-3 bg-slate-50 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 transition"
+      class="w-full mb-5 px-5 py-3 bg-slate-50 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-600 transition"
       :disabled="loading"
       autocomplete="username"
     />
@@ -65,7 +67,7 @@ const login = async () => {
       v-model="password"
       type="password"
       placeholder="Password"
-      class="w-full mb-4 px-6 py-3 bg-slate-50 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 transition"
+      class="w-full mb-6 px-5 py-3 bg-slate-50 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-600 transition"
       :disabled="loading"
       autocomplete="current-password"
     />
@@ -73,12 +75,15 @@ const login = async () => {
     <button
       @click="login"
       :disabled="loading"
-      class="w-full bg-sky-800 text-white py-3 rounded-full hover:bg-sky-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
+      class="w-full bg-sky-700 text-white py-3 rounded-lg hover:bg-sky-600 transition disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
     >
       <span v-if="loading">Logging in...</span>
       <span v-else>Log In</span>
     </button>
 
-    <p v-if="error" class="mt-4 text-red-600 text-center">{{ error }}</p>
+    <p v-if="error" class="mt-4 text-center text-red-600 font-medium">
+      {{ error }}
+    </p>
   </div>
 </template>
+

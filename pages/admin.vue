@@ -1,21 +1,31 @@
 <template>
-  <div class="max-w-6xl mx-auto mt-24 p-6 space-y-6">
-    <h1 class="text-3xl font-bold mb-6">Admin: Manage Assets</h1>
-    <CleanupUnusedAssets />
-    <button
-      @click="logout"
-      class="mb-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
-    >
-      Logout
-    </button>
+  <div class="max-w-6xl mx-auto mt-32 p-8 bg-white rounded-lg shadow-md space-y-8">
+    <h1 class="text-4xl font-extrabold mb-8">Admin: Manage Assets</h1>
+
+    <div class="flex items-center justify-between gap-4">
+      <CleanupUnusedAssets />
+
+      <button
+        @click="logout"
+        class="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition font-semibold"
+      >
+        Logout
+      </button>
+    </div>
 
     <!-- Success & Error Messages -->
-    <div v-if="success" class="text-green-600 font-medium">{{ success }}</div>
-    <div v-if="error" class="text-red-600 font-medium">{{ error }}</div>
+    <div>
+      <div v-if="success" class="mb-4 text-green-700 bg-green-100 px-4 py-2 rounded-md font-semibold">
+        {{ success }}
+      </div>
+      <div v-if="error" class="mb-4 text-red-700 bg-red-100 px-4 py-2 rounded-md font-semibold">
+        {{ error }}
+      </div>
+    </div>
 
     <AssetTable :assets="assets" @edit="startEdit" @delete="deleteAsset" />
 
-    <hr class="my-6" />
+    <hr class="my-10 border-gray-300" />
 
     <AssetForm
       v-model="form"
@@ -26,6 +36,7 @@
     />
   </div>
 </template>
+
 
 <script setup>
 import { ref, onMounted } from 'vue';
