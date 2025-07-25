@@ -1,14 +1,16 @@
 <template>
   <Hero class="mt-24" />
-  <section class="w-full px-24 space-y-8">
+
+  <section class="w-full border-b  mb-8 pb-8  px-6 sm:px-12 md:px-16 lg:px-24 space-y-8">
     <h1 class="text-2xl font-bold mb-4">Recently Added Files</h1>
 
     <!-- Grid of cards -->
     <div
       class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6"
     >
+    <!-- v-for="(item, i) in (recent || []).filter(asset => asset.type === '3d')" -->
     <AssetCard
-  v-for="(item, i) in recent"
+    v-for="(item, i) in (recent || []).slice(0, 4)"
   :key="item.id || i"
   :title="item.title"
   :type="item.type"
@@ -20,14 +22,43 @@
 />
 
     </div>
+
   </section>
+
+
+  <section class="w-full px-6 sm:px-12 md:px-16 lg:px-24 space-y-8">
+    <h1 class="text-2xl font-bold mb-4">HDRI Maps</h1>
+    <!-- Grid of cards -->
+    <div
+      class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6"
+    >
+    <!-- v-for="(item, i) in (recent || []).filter(asset => asset.type === '3d')" -->
+    <AssetCard
+    v-for="(item, i) in (recent || []).filter(asset => asset.type === 'HDRI')"
+  :key="item.id || i"
+  :title="item.title"
+  :type="item.type"
+  :image="item.image"
+  :link="`/assets/${item.id}`"
+  :tags="item.tags"
+  :downloads="item.downloads"
+  :openSource="item.open_source"
+/>
+
+    </div>
+
+  </section>
+
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
 const supabase = useSupabaseClient();
 
+
+
 const recent = ref([]);
+
 
 onMounted(async () => {
   const { data, error } = await supabase

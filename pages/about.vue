@@ -49,3 +49,26 @@
     </div>
   </section>
 </template>
+
+<script setup>
+useHead({
+  title: 'About Sprigggy – Free Design Asset Platform',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Learn more about Sprigggy — an open-source platform for free, high-quality design assets built to empower creators around the world.',
+    },
+    { property: 'og:title', content: 'About Sprigggy – Free Design Asset Platform' },
+    {
+      property: 'og:description',
+      content:
+        'Discover the mission and story behind Sprigggy. We’re building a clean, free platform for designers to share and use creative assets with zero friction.',
+    },
+    { property: 'og:image', content: 'https://sprigggy.com/og-image-about.jpg' }, // <- set correct path
+    { property: 'og:url', content: 'https://sprigggy.com/about' },
+    { name: 'twitter:card', content: 'summary_large_image' }
+  ],
+  link: [{ rel: 'canonical', href: 'https://sprigggy.com/about' }]
+});
+</script>

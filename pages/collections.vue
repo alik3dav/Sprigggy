@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full p-24 space-y-8 mt-24 ">
-    <h1 class="text-2xl font-bold">All Assets</h1>
+  <div class="w-full  px-6 sm:px-12 md:px-16 lg:px-24 space-y-8 ">
+    <h1 class="text-2xl mt-32 font-bold">All Assets</h1>
 
 
 <!-- Filters -->
@@ -160,4 +160,17 @@ onMounted(async () => {
 watchEffect(() => {
   loadAssets();
 });
+
+useHead({
+  title: 'All Free Design Assets – Sprigggy',
+  meta: [
+    { name: 'description', content: 'Browse all free design assets on Sprigggy. From illustrations to 3D, sorted by category, tags, or popularity.' },
+    { property: 'og:title', content: 'All Free Design Assets – Sprigggy' },
+    { property: 'og:description', content: 'Explore the full collection of design resources on Sprigggy.' },
+    { property: 'og:image', content: 'https://sprigggy.com/og-image.jpg' }, // replace with your OG image
+    { property: 'og:url', content: 'https://sprigggy.com/assets' },
+    { name: 'twitter:card', content: 'summary_large_image' }
+  ]
+})
+
 </script>
