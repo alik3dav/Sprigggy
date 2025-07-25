@@ -42,7 +42,16 @@
         <ToastEditor v-model="localForm.description" />
       </ClientOnly>
     </div>
-
+<!-- Open Source Toggle -->
+<div class="flex items-center space-x-2">
+  <input
+    type="checkbox"
+    v-model="localForm.open_source"
+    id="openSource"
+    class="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500"
+  />
+  <label for="openSource" class="text-sm font-medium text-gray-700">Open Source</label>
+</div>
     <!-- Provider -->
     <div>
       <label class="block font-medium mb-1">Provider</label>
@@ -118,7 +127,7 @@ const props = defineProps({
 
 const emit = defineEmits(['update:modelValue', 'submit', 'cancel'])
 
-const localForm = ref({ ...props.modelValue })
+const localForm = ref({ open_source: false, ...props.modelValue })
 const uploading = ref(false)
 
 watch(

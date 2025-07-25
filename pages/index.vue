@@ -7,11 +7,18 @@
     <div
       class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6"
     >
-      <AssetCard
-        v-for="(item, i) in recent"
-        :key="item.id || i"
-        v-bind="{ ...item, link: `/assets/${item.id}` }"
-      />
+    <AssetCard
+  v-for="(item, i) in recent"
+  :key="item.id || i"
+  :title="item.title"
+  :type="item.type"
+  :image="item.image"
+  :link="`/assets/${item.id}`"
+  :tags="item.tags"
+  :downloads="item.downloads"
+  :openSource="item.open_source"
+/>
+
     </div>
   </section>
 </template>

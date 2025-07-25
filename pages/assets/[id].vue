@@ -200,13 +200,18 @@ watch(asset, (val) => {
             Download Now
           </a>
         </div>
-
+        <div v-if="openSource" class="absolute top-2 left-2 bg-green-600 text-white text-[10px] px-2 py-0.5 rounded-full shadow-sm z-10">
+         Open Source
+      </div>
         <div class="text-sm text-gray-600 space-y-2">
           <p><strong>Added:</strong> {{ formatDate(asset?.date) }}</p>
           <p>
             <strong>Downloads:</strong>
             {{ asset?.downloads?.toLocaleString() || 0 }}
           </p>
+          <p v-if="asset?.open_source">
+  <span class="text-green-500">Open Source</span>
+</p>
         </div>
 
         <!-- Related Assets Section -->

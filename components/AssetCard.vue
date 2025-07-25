@@ -1,15 +1,26 @@
 <template>
+  
   <div>
+    
     <!-- Image with overlay and open source badge -->
     <div class="relative rounded-lg overflow-hidden duration-300 aspect-[4/3]">
-      <!-- Optional top-left badge -->
-      <div
-        v-if="openSource"
-        class="absolute top-2 left-2 bg-green-600 text-white text-[10px] px-2 py-0.5 rounded-full shadow-sm z-10"
-      >
-        Open Source
-      </div>
 
+
+
+  <!-- Badge -->
+  <div
+    v-if="openSource"
+    class="absolute top-1 right-4 z-20"
+    title="Open Source"
+  ><span class="text-[10px] font-medium text-green-300">
+    Open Source
+  </span>
+    
+  </div>
+
+
+
+ <!-- Image -->
       <NuxtLink :to="link" class="block group h-full w-full">
         <img
           :src="image"
@@ -31,7 +42,7 @@
       </NuxtLink>
     </div>
 
-    <!-- Metadata: type, tags, open source, downloads -->
+    <!-- Metadata: type, tags, downloads -->
     <div class="flex items-center justify-between h-8 mt-2 px-1">
       <div class="flex gap-2 overflow-hidden whitespace-nowrap text-xs text-gray-700">
         <span class="bg-gray-100 rounded-full px-2 py-0.5">{{ type }}</span>
@@ -43,13 +54,6 @@
         >
           {{ tag }}
         </span>
-
-        <span
-          v-if="openSource"
-          class="bg-green-100 text-green-700 rounded-full px-2 py-0.5"
-        >
-          Open Source
-        </span>
       </div>
 
       <div class="flex items-center gap-1 text-xs text-gray-500 whitespace-nowrap">
@@ -59,6 +63,7 @@
     </div>
   </div>
 </template>
+
 
 
 

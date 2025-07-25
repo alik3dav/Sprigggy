@@ -4803,6 +4803,15 @@ const sources$1 = [
                 "loc": "/login"
             },
             {
+                "loc": "/terms"
+            },
+            {
+                "loc": "/cookies"
+            },
+            {
+                "loc": "/privacy"
+            },
+            {
                 "loc": "/collections"
             }
         ],
