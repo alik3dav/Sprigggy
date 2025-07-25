@@ -43,7 +43,7 @@
         <button
           class="bg-zinc-900 text-white px-6 py-3 rounded-full font-medium hover:bg-zinc-800 transition"
         >
-          🎨 Browse Collections
+          🎨 Browse Collections 
         </button>
       </NuxtLink>
     </div>
