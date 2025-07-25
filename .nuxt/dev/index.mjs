@@ -735,6 +735,8 @@ const _inlineRuntimeConfig = {
         "include": [],
         "exclude": [
           "/_**",
+          "/_nuxt/**",
+          "/_nuxt/**",
           "/_nuxt/**"
         ],
         "includeAppSources": true
@@ -765,6 +767,40 @@ const _inlineRuntimeConfig = {
     "debug": false,
     "credits": true,
     "groups": [
+      {
+        "comment": [],
+        "disallow": [],
+        "allow": [
+          "/"
+        ],
+        "userAgent": [
+          "*"
+        ],
+        "_indexable": true,
+        "_rules": [
+          {
+            "pattern": "/",
+            "allow": true
+          }
+        ]
+      },
+      {
+        "comment": [],
+        "disallow": [],
+        "allow": [
+          "/"
+        ],
+        "userAgent": [
+          "*"
+        ],
+        "_indexable": true,
+        "_rules": [
+          {
+            "pattern": "/",
+            "allow": true
+          }
+        ]
+      },
       {
         "comment": [],
         "disallow": [],
@@ -1170,7 +1206,7 @@ const _yf8xY5fbvV72lpWtj4U5IqpRFENqBkrGgzWTlKny6A = (function(nitro) {
 
 const rootDir = "/home/alik3dav/Sprigggy";
 
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap"}],"style":[],"script":[],"noscript":[]};
+const appHead = {"meta":[{"name":"description","content":"Sprigggy: Free, high-quality design assets for creatives."},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"property":"og:type","content":"website"},{"property":"og:site_name","content":"Sprigggy"},{"property":"og:url","content":"https://sprigggy.com"}],"link":[{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap"}],"style":[],"script":[],"noscript":[],"titleTemplate":"%s | Sprigggy"};
 
 const appRootTag = "div";
 

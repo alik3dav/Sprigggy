@@ -14,19 +14,28 @@ export default defineNuxtConfig({
   },
   
   sitemap: {
-    siteUrl: 'https://zippykit.com',
+    siteUrl: 'https://sprigggy.com', // or your actual domain
     trailingSlash: false,
     routes: async () => {
-      // Dynamically generate asset URLs from Supabase
-      const client = useSupabaseClient()
-      const { data } = await client.from('assets').select('id')
-      return data.map((asset) => `/assets/${asset.id}`)
+      const client = useSupabaseClient();
+      const { data } = await client.from('assets').select('id');
+      return data ? data.map((asset) => `/assets/${asset.id}`) : [];
     },
   },
   // No 'plugins' array here for Tailwind plugins!
 
   app: {
     head: {
+      titleTemplate: '%s | Sprigggy',
+      meta: [
+        { name: 'description', content: 'Sprigggy: Free, high-quality design assets for creatives.' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { charset: 'utf-8' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'Sprigggy' },
+        { property: 'og:url', content: 'https://sprigggy.com' },
+        // Add more defaults or canonical here if needed
+      ],
       link: [
         {
           rel: 'stylesheet',
@@ -36,5 +45,6 @@ export default defineNuxtConfig({
       ],
     },
   },
+  
   
 });

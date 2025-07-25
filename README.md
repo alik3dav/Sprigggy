@@ -1,50 +1,54 @@
-# ZippyKit — Free Design Assets Hub
+# 🌱 Sprigggy — Free Design Assets for Creators
 
-ZippyKit is your go-to destination for high-quality, ready-to-use design assets — completely free. From templates and plugins to icons and UI kits, we help creatives and businesses save time and elevate their projects.
+**Sprigggy** is a clean, curated library of high-quality, ready-to-use design resources — 100% free. From templates to plugins, UI kits to mockups, it’s built to help creatives work faster, smarter, and better.
 
----
-
-## Why ZippyKit?
-
-Every designer and marketer knows the struggle of hunting for the perfect asset — often costly, time-consuming, or just plain missing. ZippyKit solves that by offering:
-
-- **Curated, professional-quality assets** that fit modern design needs  
-- **Easy downloads** with no hidden fees or complicated licensing  
-- **A constantly growing library** updated with fresh resources regularly  
-- **Categories for every need:** branding, UI kits, templates, plugins, and more  
-- **Community-driven** — assets crafted by top creators and shared for free  
+No noise. No paywalls. Just good design.
 
 ---
 
-## Who Benefits?
+## ✨ Why Sprigggy?
 
-- Freelancers and agencies seeking quick, reliable resources  
-- Startups and small businesses wanting to boost branding without breaking the bank  
-- Students and hobbyists learning design with real-world tools  
-- Marketers and content creators needing on-demand visual content  
+Every creative hits the same wall: you need that *one thing* — a mockup, a plugin, a clean UI kit — but it's either overpriced or buried in sketchy sites. Sprigggy fixes that.
 
----
-
-## Key Features
-
-- **Simple, clean interface:** Find assets quickly without clutter  
-- **Preview before download:** Make sure it fits your project perfectly  
-- **Secure and fast hosting:** Download assets instantly with zero hassle  
-- **Exclusive freebies:** Special collections and seasonal packs you won’t find elsewhere  
-- **Regular updates:** New assets added weekly to keep your toolkit fresh  
+- 🎨 **Curated, professional-grade assets** that match modern design standards  
+- ⚡ **Instant downloads** — no login walls, no license headaches  
+- 🔄 **Regular drops** — new free assets added weekly  
+- 🧩 **Diverse categories**: UI kits, branding, templates, icons, and more  
+- 🤝 **Creator-powered** — made by designers, for designers  
 
 ---
 
-## Join the Movement
+## 👥 Who It’s For
 
-ZippyKit isn’t just a website — it’s a community of creators sharing and growing together. Explore, download, and let your creativity flow.
+Sprigggy is perfect for:
+
+- Freelancers & agencies who need plug-and-play resources  
+- Startups & solo founders bootstrapping a visual identity  
+- Students & learners building real-world design skills  
+- Marketers & content creators who need polished assets fast  
 
 ---
 
-## Ready to Upgrade Your Design Game?
+## 🛠️ Features
 
-Dive in and discover free assets that work as hard as you do.
+- 🧭 **Minimal UI** — browse, preview, download. That’s it.  
+- 🖼️ **Instant previews** — see what you're getting before you commit  
+- 🚀 **Fast hosting** — no waiting, no fluff  
+- 🎁 **Exclusive freebies** — curated packs and hidden gems  
+- 🧼 **Zero junk** — just clean, useful, high-quality assets  
 
 ---
 
-Made with ❤️ by Alik — passionate about empowering designers worldwide
+## 🌍 Join the Movement
+
+Sprigggy isn’t just a resource hub — it’s a creative playground powered by the design community. We’re here to save time, spark ideas, and support creative freedom.
+
+---
+
+## 🚀 Ready to Create Without Limits?
+
+Start downloading. Stay inspired. Build beautiful things.
+
+---
+
+Made with ❤️ by **Alik** — designer, maker, and believer in open creative tools.

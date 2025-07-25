@@ -50,7 +50,7 @@ const login = async () => {
 
 <template>
   <div class="max-w-md mx-auto p-6 mt-24">
-    <h1 class="text-2xl font-bold mb-6 text-center">Login to Zippykit</h1>
+    <h1 class="text-2xl font-bold mb-6 text-center">Login to Sprigggy</h1>
 
     <input
       v-model="email"
