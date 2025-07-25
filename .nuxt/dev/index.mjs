@@ -1,43 +1,43 @@
 import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { tmpdir } from 'node:os';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getRequestHost, getRequestProtocol, setHeader, getQuery as getQuery$1, getHeader, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, getRouterParam, getResponseStatusText } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/h3@1.15.3/node_modules/h3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getRequestHost, getRequestProtocol, setHeader, getQuery as getQuery$1, getHeader, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, getRouterParam, getResponseStatusText } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/h3@1.15.3/node_modules/h3/dist/index.mjs';
 import { Server } from 'node:http';
 import { resolve as resolve$1, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
 import { parentPort, threadId } from 'node:worker_threads';
-import { escapeHtml } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/@vue+shared@3.5.17/node_modules/@vue/shared/dist/shared.cjs.js';
-import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/vue-bundle-renderer@2.1.1/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, hasProtocol, withHttps, withoutTrailingSlash, decodePath, withLeadingSlash, withoutProtocol, withBase, parsePath, parseQuery, stringifyQuery, encodePath, stringifyParsedURL, joinRelativeURL } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/ufo@1.6.1/node_modules/ufo/dist/index.mjs';
-import { renderToString } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue/server-renderer/index.mjs';
-import destr, { destr as destr$1 } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/destr@2.0.5/node_modules/destr/dist/index.mjs';
-import { createHooks } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/hookable@5.5.3/node_modules/hookable/dist/index.mjs';
-import { createFetch, Headers as Headers$1 } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/ofetch@1.4.1/node_modules/ofetch/dist/node.mjs';
-import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/node-mock-http@1.0.1/node_modules/node-mock-http/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/unstorage@1.16.1_db0@0.3.2_ioredis@5.6.1/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/unstorage@1.16.1_db0@0.3.2_ioredis@5.6.1/node_modules/unstorage/drivers/fs.mjs';
-import { digest } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/ohash@2.0.11/node_modules/ohash/dist/index.mjs';
-import { klona } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/klona@2.0.6/node_modules/klona/dist/index.mjs';
-import defu, { defuFn, defu as defu$1, createDefu } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/defu@6.1.4/node_modules/defu/dist/defu.mjs';
-import { snakeCase } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/scule@1.3.0/node_modules/scule/dist/index.mjs';
-import { getContext } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/unctx@2.4.1/node_modules/unctx/dist/index.mjs';
-import { toRouteMatcher, createRouter } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/radix3@1.1.2/node_modules/radix3/dist/index.mjs';
+import { escapeHtml } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/@vue+shared@3.5.17/node_modules/@vue/shared/dist/shared.cjs.js';
+import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/vue-bundle-renderer@2.1.1/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, hasProtocol, withHttps, withoutTrailingSlash, decodePath, withLeadingSlash, withoutProtocol, withBase, parsePath, parseQuery, stringifyQuery, encodePath, stringifyParsedURL, joinRelativeURL } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/ufo@1.6.1/node_modules/ufo/dist/index.mjs';
+import { renderToString } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue/server-renderer/index.mjs';
+import destr, { destr as destr$1 } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/destr@2.0.5/node_modules/destr/dist/index.mjs';
+import { createHooks } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/hookable@5.5.3/node_modules/hookable/dist/index.mjs';
+import { createFetch, Headers as Headers$1 } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/ofetch@1.4.1/node_modules/ofetch/dist/node.mjs';
+import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/node-mock-http@1.0.1/node_modules/node-mock-http/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/unstorage@1.16.1_db0@0.3.2_ioredis@5.6.1/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/unstorage@1.16.1_db0@0.3.2_ioredis@5.6.1/node_modules/unstorage/drivers/fs.mjs';
+import { digest } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/ohash@2.0.11/node_modules/ohash/dist/index.mjs';
+import { klona } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/klona@2.0.6/node_modules/klona/dist/index.mjs';
+import defu, { defuFn, defu as defu$1, createDefu } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/defu@6.1.4/node_modules/defu/dist/defu.mjs';
+import { snakeCase } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/scule@1.3.0/node_modules/scule/dist/index.mjs';
+import { getContext } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/unctx@2.4.1/node_modules/unctx/dist/index.mjs';
+import { toRouteMatcher, createRouter } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/radix3@1.1.2/node_modules/radix3/dist/index.mjs';
 import { readFile } from 'node:fs/promises';
-import consola, { consola as consola$1, createConsola } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/consola@3.4.2/node_modules/consola/dist/index.mjs';
-import { ErrorParser } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/youch-core@0.3.3/node_modules/youch-core/build/index.js';
-import { Youch } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/youch@4.1.0-beta.8/node_modules/youch/build/index.js';
-import { SourceMapConsumer } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/source-map@0.7.4/node_modules/source-map/source-map.js';
+import consola, { consola as consola$1, createConsola } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/consola@3.4.2/node_modules/consola/dist/index.mjs';
+import { ErrorParser } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/youch-core@0.3.3/node_modules/youch-core/build/index.js';
+import { Youch } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/youch@4.1.0-beta.8/node_modules/youch/build/index.js';
+import { SourceMapConsumer } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/source-map@0.7.4/node_modules/source-map/source-map.js';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import { stringify, uneval } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/devalue@5.1.1/node_modules/devalue/index.js';
-import { captureRawStackTrace, parseRawStackTrace } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/errx@0.1.0/node_modules/errx/dist/index.js';
-import { isVNode, toValue, isRef } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue/index.mjs';
-import devalue from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/@nuxt+devalue@2.0.2/node_modules/@nuxt/devalue/dist/devalue.mjs';
+import { stringify, uneval } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/devalue@5.1.1/node_modules/devalue/index.js';
+import { captureRawStackTrace, parseRawStackTrace } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/errx@0.1.0/node_modules/errx/dist/index.js';
+import { isVNode, toValue, isRef } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue/index.mjs';
+import devalue from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/@nuxt+devalue@2.0.2/node_modules/@nuxt/devalue/dist/devalue.mjs';
 import { promises } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname as dirname$1, resolve as resolve$2 } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/pathe@2.0.3/node_modules/pathe/dist/index.mjs';
-import { createHead as createHead$1, propsToString, renderSSRHead } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/unhead@2.0.12/node_modules/unhead/dist/server.mjs';
-import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/unhead@2.0.12/node_modules/unhead/dist/plugins.mjs';
-import { walkResolver } from 'file:///home/alik3dav/ZippyKit/node_modules/.pnpm/unhead@2.0.12/node_modules/unhead/dist/utils.mjs';
+import { dirname as dirname$1, resolve as resolve$2 } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/pathe@2.0.3/node_modules/pathe/dist/index.mjs';
+import { createHead as createHead$1, propsToString, renderSSRHead } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/unhead@2.0.12/node_modules/unhead/dist/server.mjs';
+import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/unhead@2.0.12/node_modules/unhead/dist/plugins.mjs';
+import { walkResolver } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/unhead@2.0.12/node_modules/unhead/dist/utils.mjs';
 
-const serverAssets = [{"baseName":"server","dir":"/home/alik3dav/ZippyKit/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"/home/alik3dav/Sprigggy/server/assets"}];
 
 const assets$1 = createStorage();
 
@@ -49,11 +49,11 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets$1);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/home/alik3dav/ZippyKit","watchOptions":{"ignored":[null]}}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/home/alik3dav/ZippyKit/server","watchOptions":{"ignored":[null]}}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/home/alik3dav/ZippyKit/.nuxt"}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/home/alik3dav/ZippyKit/.nuxt/cache"}));
-storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"/home/alik3dav/ZippyKit/.data/kv"}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/home/alik3dav/Sprigggy","watchOptions":{"ignored":[null]}}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/home/alik3dav/Sprigggy/server","watchOptions":{"ignored":[null]}}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/home/alik3dav/Sprigggy/.nuxt"}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/home/alik3dav/Sprigggy/.nuxt/cache"}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"/home/alik3dav/Sprigggy/.data/kv"}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -746,7 +746,7 @@ const _inlineRuntimeConfig = {
       {
         "_context": "system",
         "_priority": -15,
-        "name": "ZippyKit",
+        "name": "Sprigggy",
         "env": "development"
       },
       {
@@ -1162,13 +1162,13 @@ if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
 window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
 `;
 
-const _rv1sZRisI3_E2p9JYykAXL9SKAfOC9ZuzRQN5J1Rxnw = (function(nitro) {
+const _yf8xY5fbvV72lpWtj4U5IqpRFENqBkrGgzWTlKny6A = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
 });
 
-const rootDir = "/home/alik3dav/ZippyKit";
+const rootDir = "/home/alik3dav/Sprigggy";
 
 const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap"}],"style":[],"script":[],"noscript":[]};
 
@@ -1187,7 +1187,7 @@ const devReducers = {
   URL: (data) => data instanceof URL ? data.toString() : void 0
 };
 const asyncContext = getContext("nuxt-dev", { asyncContext: true, AsyncLocalStorage });
-const _XXMilwe0uRPDrHFpF51eUDBLYh4ep2j3i1MszDzQxG8 = (nitroApp) => {
+const _0mWiID9rL5FhD85F0rwjbI4I45wIEOdTK2By_T55RM = (nitroApp) => {
   const handler = nitroApp.h3App.handler;
   nitroApp.h3App.handler = (event) => {
     return asyncContext.callAsync({ logs: [], event }, () => handler(event));
@@ -1348,7 +1348,7 @@ function useSiteConfig(e, _options) {
   return e.context.siteConfig.get(options);
 }
 
-const _jGfnC2vKOdVtharSeLDJ6a2WVFHJiAiaaRlotWA = defineNitroPlugin(async (nitroApp) => {
+const _Im0kBAq9_nZ83Bje52ntlKmz_CWSFjOzNj10ps2LvU = defineNitroPlugin(async (nitroApp) => {
   nitroApp.hooks.hook("render:html", async (ctx, { event }) => {
     const routeOptions = getRouteRules(event);
     const isIsland = process.env.NUXT_COMPONENT_ISLANDS && event.path.startsWith("/__nuxt_island");
@@ -1731,7 +1731,7 @@ async function resolveRobotsTxtContext(e, nitro = useNitroApp()) {
   return generateRobotsTxtCtx;
 }
 
-const _k6YynqqTjy4c59eX3B1Hf29Uh0Y1IAUQpSJ2CIdwSuk = defineNitroPlugin(async (nitroApp) => {
+const _5YMo326TAypamiVIhUw4HWM9xIjhecpEKRDgKYUc = defineNitroPlugin(async (nitroApp) => {
   const { isNuxtContentV2, robotsDisabledValue, botDetection } = useRuntimeConfigNuxtRobots();
   if (botDetection !== false) {
     nitroApp._robotsPatternMap = createPatternMap();
@@ -1756,10 +1756,10 @@ const _k6YynqqTjy4c59eX3B1Hf29Uh0Y1IAUQpSJ2CIdwSuk = defineNitroPlugin(async (ni
 });
 
 const plugins = [
-  _rv1sZRisI3_E2p9JYykAXL9SKAfOC9ZuzRQN5J1Rxnw,
-_XXMilwe0uRPDrHFpF51eUDBLYh4ep2j3i1MszDzQxG8,
-_jGfnC2vKOdVtharSeLDJ6a2WVFHJiAiaaRlotWA,
-_k6YynqqTjy4c59eX3B1Hf29Uh0Y1IAUQpSJ2CIdwSuk
+  _yf8xY5fbvV72lpWtj4U5IqpRFENqBkrGgzWTlKny6A,
+_0mWiID9rL5FhD85F0rwjbI4I45wIEOdTK2By_T55RM,
+_Im0kBAq9_nZ83Bje52ntlKmz_CWSFjOzNj10ps2LvU,
+_5YMo326TAypamiVIhUw4HWM9xIjhecpEKRDgKYUc
 ];
 
 const assets = {};
@@ -1787,7 +1787,7 @@ function getAsset (id) {
 
 const METHODS = /* @__PURE__ */ new Set(["HEAD", "GET"]);
 const EncodingMap = { gzip: ".gz", br: ".br" };
-const _28IEIe = eventHandler((event) => {
+const _Y_1vWr = eventHandler((event) => {
   if (event.method && !METHODS.has(event.method)) {
     return;
   }
@@ -1878,7 +1878,7 @@ function useNitroOrigin(e) {
   return withTrailingSlash(`${protocol}://${host}${port}`);
 }
 
-const _w3OoJb = eventHandler(async (e) => {
+const _EqfWJ4 = eventHandler(async (e) => {
   if (e.context._initedSiteConfig)
     return;
   const runtimeConfig = useRuntimeConfig(e);
@@ -1930,7 +1930,7 @@ const _w3OoJb = eventHandler(async (e) => {
   e.context._initedSiteConfig = true;
 });
 
-const _9wXirm = eventHandler(async (e) => {
+const _4IFHca = eventHandler(async (e) => {
   const siteConfig = useSiteConfig(e);
   const nitroOrigin = useNitroOrigin(e);
   const runtimeConfig = useRuntimeConfig(e);
@@ -2175,7 +2175,7 @@ function getSiteRobotConfig(e) {
   return { indexable, hints };
 }
 
-const _Dsi74q = defineEventHandler(async (e) => {
+const _gniq4x = defineEventHandler(async (e) => {
   const nitroApp = useNitroApp();
   const { indexable, hints } = getSiteRobotConfig(e);
   const { credits, isNuxtContentV2, cacheControl } = useRuntimeConfigNuxtRobots(e);
@@ -2394,7 +2394,7 @@ function getPathRobotConfig(e, options) {
   };
 }
 
-const _SYXRVA = defineEventHandler(async (e) => {
+const _rW2hmi = defineEventHandler(async (e) => {
   if (e.path === "/robots.txt" || e.path.startsWith("/__") || e.path.startsWith("/api") || e.path.startsWith("/_nuxt"))
     return;
   const nuxtRobotsConfig = useRuntimeConfigNuxtRobots(e);
@@ -2408,7 +2408,7 @@ const _SYXRVA = defineEventHandler(async (e) => {
   }
 });
 
-const __Ailyl = defineEventHandler(async (e) => {
+const _dntJwG = defineEventHandler(async (e) => {
   const runtimeConfig = useRuntimeConfigNuxtRobots(e);
   const { indexable, hints } = getSiteRobotConfig(e);
   const siteConfig = useSiteConfig(e);
@@ -2428,7 +2428,7 @@ const __Ailyl = defineEventHandler(async (e) => {
   };
 });
 
-const _FL0zMr = defineEventHandler(async (e) => {
+const _GrSVsB = defineEventHandler(async (e) => {
   const query = getQuery$1(e);
   const path = query.path;
   delete query.path;
@@ -2877,7 +2877,7 @@ async function parseSitemapXml(xml) {
   if (!xml) {
     throw new Error("Empty XML input provided");
   }
-  const { XMLParser } = await import('file:///home/alik3dav/ZippyKit/node_modules/.pnpm/fast-xml-parser@5.2.5/node_modules/fast-xml-parser/src/fxp.js');
+  const { XMLParser } = await import('file:///home/alik3dav/Sprigggy/node_modules/.pnpm/fast-xml-parser@5.2.5/node_modules/fast-xml-parser/src/fxp.js');
   const parser = new XMLParser({
     isArray: (tagName) => ["url", "image", "video", "link", "tag", "price"].includes(tagName),
     removeNSPrefix: true,
@@ -3050,7 +3050,7 @@ async function resolveSitemapSources(sources, event) {
   )).flat();
 }
 
-const _LiNZZi = defineEventHandler(async (e) => {
+const _6cZr3G = defineEventHandler(async (e) => {
   const _runtimeConfig = useSitemapRuntimeConfig();
   const { sitemaps: _sitemaps } = _runtimeConfig;
   const runtimeConfig = { ..._runtimeConfig };
@@ -3072,7 +3072,7 @@ const _LiNZZi = defineEventHandler(async (e) => {
   };
 });
 
-const _TXjJk3 = defineEventHandler(async (e) => {
+const _CdeChR = defineEventHandler(async (e) => {
   const fixPath = createSitePathResolver(e, { absolute: false, withBase: true });
   const { sitemapName: fallbackSitemapName, cacheMaxAgeSeconds, version, xslColumns, xslTips } = useSitemapRuntimeConfig();
   setHeader(e, "Content-Type", "application/xslt+xml");
@@ -4078,7 +4078,7 @@ async function createSitemap(event, definition, runtimeConfig) {
   return xml;
 }
 
-const _bQrgkm = defineEventHandler(async (e) => {
+const _IUz7GR = defineEventHandler(async (e) => {
   const runtimeConfig = useSitemapRuntimeConfig();
   const { sitemaps } = runtimeConfig;
   if ("index" in sitemaps) {
@@ -4158,8 +4158,8 @@ function publicAssetsURL(...path) {
 
 const APP_ROOT_OPEN_TAG = `<${appRootTag}${propsToString(appRootAttrs)}>`;
 const APP_ROOT_CLOSE_TAG = `</${appRootTag}>`;
-const getServerEntry = () => import('file:///home/alik3dav/ZippyKit/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
-const getClientManifest = () => import('file:///home/alik3dav/ZippyKit/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getServerEntry = () => import('file:///home/alik3dav/Sprigggy/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
+const getClientManifest = () => import('file:///home/alik3dav/Sprigggy/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 const getSSRRenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
   if (!manifest) {
@@ -4405,22 +4405,22 @@ async function getIslandContext(event) {
   return ctx;
 }
 
-const _lazy_hEvbgA = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_7jb0ES = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '', handler: _28IEIe, lazy: false, middleware: true, method: undefined },
-  { route: '/__nuxt_error', handler: _lazy_hEvbgA, lazy: true, middleware: false, method: undefined },
-  { route: '', handler: _w3OoJb, lazy: false, middleware: true, method: undefined },
-  { route: '/__site-config__/debug.json', handler: _9wXirm, lazy: false, middleware: false, method: undefined },
-  { route: '/robots.txt', handler: _Dsi74q, lazy: false, middleware: false, method: undefined },
-  { route: '', handler: _SYXRVA, lazy: false, middleware: true, method: undefined },
-  { route: '/__robots__/debug.json', handler: __Ailyl, lazy: false, middleware: false, method: undefined },
-  { route: '/__robots__/debug-path.json', handler: _FL0zMr, lazy: false, middleware: false, method: undefined },
-  { route: '/__sitemap__/debug.json', handler: _LiNZZi, lazy: false, middleware: false, method: undefined },
-  { route: '/__sitemap__/style.xsl', handler: _TXjJk3, lazy: false, middleware: false, method: undefined },
-  { route: '/sitemap.xml', handler: _bQrgkm, lazy: false, middleware: false, method: undefined },
+  { route: '', handler: _Y_1vWr, lazy: false, middleware: true, method: undefined },
+  { route: '/__nuxt_error', handler: _lazy_7jb0ES, lazy: true, middleware: false, method: undefined },
+  { route: '', handler: _EqfWJ4, lazy: false, middleware: true, method: undefined },
+  { route: '/__site-config__/debug.json', handler: _4IFHca, lazy: false, middleware: false, method: undefined },
+  { route: '/robots.txt', handler: _gniq4x, lazy: false, middleware: false, method: undefined },
+  { route: '', handler: _rW2hmi, lazy: false, middleware: true, method: undefined },
+  { route: '/__robots__/debug.json', handler: _dntJwG, lazy: false, middleware: false, method: undefined },
+  { route: '/__robots__/debug-path.json', handler: _GrSVsB, lazy: false, middleware: false, method: undefined },
+  { route: '/__sitemap__/debug.json', handler: _6cZr3G, lazy: false, middleware: false, method: undefined },
+  { route: '/__sitemap__/style.xsl', handler: _CdeChR, lazy: false, middleware: false, method: undefined },
+  { route: '/sitemap.xml', handler: _IUz7GR, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_hEvbgA, lazy: true, middleware: false, method: undefined }
+  { route: '/**', handler: _lazy_7jb0ES, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
@@ -4757,9 +4757,6 @@ const sources$1 = [
         },
         "urls": [
             {
-                "loc": "/dmca"
-            },
-            {
                 "loc": "/about"
             },
             {
@@ -4770,9 +4767,6 @@ const sources$1 = [
             },
             {
                 "loc": "/login"
-            },
-            {
-                "loc": "/privacy"
             },
             {
                 "loc": "/collections"

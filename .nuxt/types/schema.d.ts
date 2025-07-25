@@ -10,9 +10,9 @@ declare module '@nuxt/schema' {
      */
     ["supabase"]: typeof import("@nuxtjs/supabase").default extends NuxtModule<infer O> ? O : Record<string, any>
     /**
-     * Configuration for `/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module`
+     * Configuration for `/home/alik3dav/Sprigggy/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module`
      */
-    ["site"]: typeof import("/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    ["site"]: typeof import("/home/alik3dav/Sprigggy/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module").default extends NuxtModule<infer O> ? O : Record<string, any>
     /**
      * Configuration for `@nuxtjs/robots`
      */
@@ -40,9 +40,9 @@ declare module '@nuxt/schema' {
      */
     ["supabase"]?: typeof import("@nuxtjs/supabase").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     /**
-     * Configuration for `/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module`
+     * Configuration for `/home/alik3dav/Sprigggy/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module`
      */
-    ["site"]?: typeof import("/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ["site"]?: typeof import("/home/alik3dav/Sprigggy/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     /**
      * Configuration for `@nuxtjs/robots`
      */
@@ -59,7 +59,7 @@ declare module '@nuxt/schema' {
      * Configuration for `@nuxt/telemetry`
      */
     ["telemetry"]?: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    modules?: (undefined | null | false | NuxtModule<any> | string | [NuxtModule | string, Record<string, any>] | ["@nuxtjs/tailwindcss", Exclude<NuxtConfig["tailwindcss"], boolean>] | ["@nuxtjs/supabase", Exclude<NuxtConfig["supabase"], boolean>] | ["/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module", Exclude<NuxtConfig["site"], boolean>] | ["@nuxtjs/robots", Exclude<NuxtConfig["robots"], boolean>] | ["@nuxtjs/sitemap", Exclude<NuxtConfig["sitemap"], boolean>] | ["@nuxt/devtools", Exclude<NuxtConfig["devtools"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
+    modules?: (undefined | null | false | NuxtModule<any> | string | [NuxtModule | string, Record<string, any>] | ["@nuxtjs/tailwindcss", Exclude<NuxtConfig["tailwindcss"], boolean>] | ["@nuxtjs/supabase", Exclude<NuxtConfig["supabase"], boolean>] | ["/home/alik3dav/Sprigggy/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module", Exclude<NuxtConfig["site"], boolean>] | ["@nuxtjs/robots", Exclude<NuxtConfig["robots"], boolean>] | ["@nuxtjs/sitemap", Exclude<NuxtConfig["sitemap"], boolean>] | ["@nuxt/devtools", Exclude<NuxtConfig["devtools"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
   }
 }
 declare module 'nuxt/schema' {
@@ -75,10 +75,10 @@ declare module 'nuxt/schema' {
      */
     ["supabase"]: typeof import("@nuxtjs/supabase").default extends NuxtModule<infer O> ? O : Record<string, any>
     /**
-     * Configuration for `/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module`
-     * @see https://www.npmjs.com/package//home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module
+     * Configuration for `/home/alik3dav/Sprigggy/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module`
+     * @see https://www.npmjs.com/package//home/alik3dav/Sprigggy/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module
      */
-    ["site"]: typeof import("/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    ["site"]: typeof import("/home/alik3dav/Sprigggy/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module").default extends NuxtModule<infer O> ? O : Record<string, any>
     /**
      * Configuration for `@nuxtjs/robots`
      * @see https://www.npmjs.com/package/@nuxtjs/robots
@@ -112,10 +112,10 @@ declare module 'nuxt/schema' {
      */
     ["supabase"]?: typeof import("@nuxtjs/supabase").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     /**
-     * Configuration for `/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module`
-     * @see https://www.npmjs.com/package//home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module
+     * Configuration for `/home/alik3dav/Sprigggy/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module`
+     * @see https://www.npmjs.com/package//home/alik3dav/Sprigggy/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module
      */
-    ["site"]?: typeof import("/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ["site"]?: typeof import("/home/alik3dav/Sprigggy/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     /**
      * Configuration for `@nuxtjs/robots`
      * @see https://www.npmjs.com/package/@nuxtjs/robots
@@ -136,7 +136,7 @@ declare module 'nuxt/schema' {
      * @see https://www.npmjs.com/package/@nuxt/telemetry
      */
     ["telemetry"]?: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    modules?: (undefined | null | false | NuxtModule<any> | string | [NuxtModule | string, Record<string, any>] | ["@nuxtjs/tailwindcss", Exclude<NuxtConfig["tailwindcss"], boolean>] | ["@nuxtjs/supabase", Exclude<NuxtConfig["supabase"], boolean>] | ["/home/alik3dav/ZippyKit/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module", Exclude<NuxtConfig["site"], boolean>] | ["@nuxtjs/robots", Exclude<NuxtConfig["robots"], boolean>] | ["@nuxtjs/sitemap", Exclude<NuxtConfig["sitemap"], boolean>] | ["@nuxt/devtools", Exclude<NuxtConfig["devtools"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
+    modules?: (undefined | null | false | NuxtModule<any> | string | [NuxtModule | string, Record<string, any>] | ["@nuxtjs/tailwindcss", Exclude<NuxtConfig["tailwindcss"], boolean>] | ["@nuxtjs/supabase", Exclude<NuxtConfig["supabase"], boolean>] | ["/home/alik3dav/Sprigggy/node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/module", Exclude<NuxtConfig["site"], boolean>] | ["@nuxtjs/robots", Exclude<NuxtConfig["robots"], boolean>] | ["@nuxtjs/sitemap", Exclude<NuxtConfig["sitemap"], boolean>] | ["@nuxt/devtools", Exclude<NuxtConfig["devtools"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
   }
   interface RuntimeConfig {
    app: {
