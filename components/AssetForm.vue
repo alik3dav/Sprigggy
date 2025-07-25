@@ -133,7 +133,10 @@ const uploading = ref(false)
 watch(
   () => props.modelValue,
   (newVal) => {
-    localForm.value = { ...newVal }
+    localForm.value = {
+      ...newVal,
+      tags: Array.isArray(newVal.tags) ? newVal.tags.join(', ') : newVal.tags || ''
+    }
   }
 )
 
@@ -156,6 +159,7 @@ async function handleFileChange(e) {
 }
 
 function onSubmit() {
-  emit('submit', { ...localForm.value })
+  emit('submit', { ...localForm.value })  // localForm.value.tags is a string here
 }
+
 </script>

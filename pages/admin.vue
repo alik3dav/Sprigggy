@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-6xl mx-auto mt-24 p-6 space-y-6">
     <h1 class="text-3xl font-bold mb-6">Admin: Manage Assets</h1>
-
+    <CleanupUnusedAssets />
     <button
       @click="logout"
       class="mb-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
@@ -30,8 +30,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-
-
+import CleanupUnusedAssets from '~/components/CleanupUnusedAssets.vue'
 import AssetTable from '~/components/AssetTable.vue';
 import AssetForm from '~/components/AssetForm.vue';
 
@@ -42,7 +41,7 @@ const assets = ref([]);
 const form = ref({
   title: '',
   type: '',
-  tags: '',
+  tags: '',           // <-- string for the input
   description: '',
   provider: '',
   download_url: '',
@@ -78,10 +77,12 @@ async function fetchAssets() {
 function startEdit(asset) {
   isEditing.value = true;
   editId.value = asset.id;
-  form.value = { ...asset };
-  error.value = '';
-  success.value = '';
+  form.value = {
+    ...asset,
+    tags: Array.isArray(asset.tags) ? asset.tags.join(', ') : asset.tags || '',
+  };
 }
+
 
 function cancelEdit() {
   isEditing.value = false;
@@ -95,7 +96,7 @@ function resetForm() {
   form.value = {
     title: '',
     type: '',
-    tags: '',
+    tags: '',           // <-- reset as string
     description: '',
     provider: '',
     download_url: '',
@@ -104,46 +105,32 @@ function resetForm() {
 }
 
 async function handleSubmit(submittedForm) {
-  error.value = '';
-  success.value = '';
-  loadingSubmit.value = true;
-
-  // Convert tags string to array (e.g., "ui, branding" → ["ui", "branding"])
-  const tagsArray = typeof submittedForm.tags === 'string'
-    ? submittedForm.tags.split(',').map(t => t.trim()).filter(Boolean)
-    : [];
+  // Defensive conversion, even if tags already an array
+  const tagsArray = Array.isArray(submittedForm.tags)
+    ? submittedForm.tags.filter(Boolean)
+    : typeof submittedForm.tags === 'string' && submittedForm.tags.trim() !== ''
+      ? submittedForm.tags.split(',').map(t => t.trim()).filter(Boolean)
+      : [];
 
   const assetData = {
     ...submittedForm,
-    tags: tagsArray, // ✅ override tags with array
+    tags: tagsArray,
     date: new Date().toISOString(),
   };
 
-  try {
-    if (isEditing.value) {
-      const { error: updateError } = await supabase
-        .from('assets')
-        .update(assetData)
-        .eq('id', editId.value);
+  console.log('Sending to Supabase:', assetData);
 
-      if (updateError) throw updateError;
-      success.value = 'Asset updated successfully';
-    } else {
-      const { error: insertError } = await supabase
-        .from('assets')
-        .insert([assetData]);
-
-      if (insertError) throw insertError;
-      success.value = 'Asset added successfully';
-    }
-
-    await fetchAssets();
-    cancelEdit();
-  } catch (err) {
-    error.value = 'Save failed: ' + err.message;
-    console.error('Failed to save asset:', err);
-  } finally {
-    loadingSubmit.value = false;
+  if (isEditing.value) {
+    const { error } = await supabase
+      .from('assets')
+      .update(assetData)
+      .eq('id', editId.value);
+    if (error) throw error;
+  } else {
+    const { error } = await supabase
+      .from('assets')
+      .insert([assetData]);
+    if (error) throw error;
   }
 }
 

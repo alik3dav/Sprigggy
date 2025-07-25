@@ -5,6 +5,7 @@ import { resolve as resolve$1, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
 import { parentPort, threadId } from 'node:worker_threads';
 import { escapeHtml } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/@vue+shared@3.5.17/node_modules/@vue/shared/dist/shared.cjs.js';
+import { createClient } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/@supabase+supabase-js@2.52.1/node_modules/@supabase/supabase-js/dist/main/index.js';
 import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/vue-bundle-renderer@2.1.1/node_modules/vue-bundle-renderer/dist/runtime.mjs';
 import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, hasProtocol, withHttps, withoutTrailingSlash, decodePath, withLeadingSlash, withoutProtocol, withBase, parsePath, parseQuery, stringifyQuery, encodePath, stringifyParsedURL, joinRelativeURL } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/ufo@1.6.1/node_modules/ufo/dist/index.mjs';
 import { renderToString } from 'file:///home/alik3dav/Sprigggy/node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue/server-renderer/index.mjs';
@@ -689,6 +690,8 @@ const _inlineRuntimeConfig = {
       "clientOptions": {}
     }
   },
+  "supabaseUrl": "https://occwjksioprnluyxooew.supabase.co",
+  "supabaseServiceRoleKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9jY3dqa3Npb3Bybmx1eXhvb2V3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MzI1OTIyNywiZXhwIjoyMDY4ODM1MjI3fQ.z2cZrOqH3j5qHDdJJnKT3Xi4puDabGmOxKY873IsSU0",
   "supabase": {
     "serviceKey": ""
   },
@@ -1796,7 +1799,22 @@ _Im0kBAq9_nZ83Bje52ntlKmz_CWSFjOzNj10ps2LvU,
 _5YMo326TAypamiVIhUw4HWM9xIjhecpEKRDgKYUc
 ];
 
-const assets = {};
+const assets = {
+  "/index.mjs": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"2c6e8-JVmXTppRJizAbknjQTU7W0LCVAE\"",
+    "mtime": "2025-07-25T09:58:24.099Z",
+    "size": 181992,
+    "path": "index.mjs"
+  },
+  "/index.mjs.map": {
+    "type": "application/json",
+    "etag": "\"b3296-sBcOXmlIrCUHxNd1G7EWRdHlXQg\"",
+    "mtime": "2025-07-25T09:58:24.100Z",
+    "size": 733846,
+    "path": "index.mjs.map"
+  }
+};
 
 function readAsset (id) {
   const serverDir = dirname$1(fileURLToPath(globalThis._importMeta_.url));
@@ -4439,10 +4457,12 @@ async function getIslandContext(event) {
   return ctx;
 }
 
+const _lazy_fksiAI = () => Promise.resolve().then(function () { return cleanupUnusedAssets_post$1; });
 const _lazy_7jb0ES = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
   { route: '', handler: _Y_1vWr, lazy: false, middleware: true, method: undefined },
+  { route: '/api/cleanup-unused-assets', handler: _lazy_fksiAI, lazy: true, middleware: false, method: "post" },
   { route: '/__nuxt_error', handler: _lazy_7jb0ES, lazy: true, middleware: false, method: undefined },
   { route: '', handler: _EqfWJ4, lazy: false, middleware: true, method: undefined },
   { route: '/__site-config__/debug.json', handler: _4IFHca, lazy: false, middleware: false, method: undefined },
@@ -4843,6 +4863,55 @@ const styles = {};
 const styles$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   default: styles
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const cleanupUnusedAssets_post = defineEventHandler(async () => {
+  const config = useRuntimeConfig();
+  if (!config.supabaseUrl || !config.supabaseServiceRoleKey) {
+    console.error("\u274C Missing Supabase config in server API");
+    return {
+      statusCode: 500,
+      body: { error: "Missing Supabase config" }
+    };
+  }
+  const supabase = createClient(
+    config.supabaseUrl,
+    config.supabaseServiceRoleKey
+  );
+  try {
+    const { data: assets, error: assetsError } = await supabase.from("assets").select("image");
+    if (assetsError) throw assetsError;
+    const usedImages = assets.map((a) => {
+      var _a;
+      return (_a = a.image) == null ? void 0 : _a.split("/").pop();
+    }).filter(Boolean);
+    console.log("\u{1F4C2} Used images:", usedImages);
+    const { data: allFiles, error: filesError } = await supabase.storage.from("assets").list("", { limit: 1e3, offset: 0 });
+    if (filesError) throw filesError;
+    const unused = allFiles.filter((file) => !usedImages.includes(file.name));
+    console.log("\u{1F5D1}\uFE0F Unused files to delete:", unused.map((f) => f.name));
+    if (unused.length === 0) {
+      return { message: "\u2705 No unused files to delete." };
+    }
+    const { data: deleted, error: deleteError } = await supabase.storage.from("assets").remove(unused.map((f) => f.name));
+    if (deleteError) throw deleteError;
+    console.log("\u2705 Deleted files:", deleted);
+    return {
+      message: `\u2705 Deleted ${(deleted == null ? void 0 : deleted.length) || 0} unused files.`,
+      deleted
+    };
+  } catch (err) {
+    console.error("\u{1F4A5} Cleanup Error:", err);
+    return {
+      statusCode: 500,
+      body: { error: err.message || "Unknown error" }
+    };
+  }
+});
+
+const cleanupUnusedAssets_post$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: cleanupUnusedAssets_post
 }, Symbol.toStringTag, { value: 'Module' }));
 
 function renderPayloadResponse(ssrContext) {

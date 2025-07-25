@@ -9,7 +9,9 @@
         <tr class="bg-gray-100">
           <th class="border border-gray-300 p-2 text-left">Title</th>
           <th class="border border-gray-300 p-2 text-left">Type</th>
+          <th class="border border-gray-300 p-2 text-left">Tags</th>
           <th class="border border-gray-300 p-2 text-left">Downloads</th>
+          <th class="border border-gray-300 p-2 text-left">OpenSource</th>
           <th class="border border-gray-300 p-2 text-left">Actions</th>
         </tr>
       </thead>
@@ -17,7 +19,11 @@
         <tr v-for="asset in assets" :key="asset.id" class="hover:bg-gray-50">
           <td class="border border-gray-300 p-2">{{ asset.title }}</td>
           <td class="border border-gray-300 p-2">{{ asset.type }}</td>
+          <td class="border border-gray-300 p-2">
+  {{ asset.tags ? asset.tags.join(', ') : '' }}
+</td>
           <td class="border border-gray-300 p-2">{{ asset.downloads || 0 }}</td>
+          <td class="border border-gray-300 p-2">{{ asset.open_source || 0 }}</td>
           <td class="border border-gray-300 p-2 space-x-2">
             <button
               @click="$emit('edit', asset)"

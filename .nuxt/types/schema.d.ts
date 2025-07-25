@@ -149,6 +149,10 @@ declare module 'nuxt/schema' {
       cdnURL: string,
    },
 
+   supabaseUrl: string,
+
+   supabaseServiceRoleKey: string,
+
    nitro: {
       envPrefix: string,
    },

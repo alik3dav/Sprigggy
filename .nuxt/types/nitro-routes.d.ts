@@ -3,6 +3,9 @@ import type { Serialize, Simplify } from "nitropack/types";
 declare module "nitropack/types" {
   type Awaited<T> = T extends PromiseLike<infer U> ? Awaited<U> : T
   interface InternalApi {
+    '/api/cleanup-unused-assets': {
+      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/cleanup-unused-assets.post').default>>>>
+    }
     '/__nuxt_error': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/core/runtime/nitro/handlers/renderer').default>>>>
     }
