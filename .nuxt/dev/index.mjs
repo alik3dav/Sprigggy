@@ -738,6 +738,7 @@ const _inlineRuntimeConfig = {
         "include": [],
         "exclude": [
           "/_**",
+          "/_nuxt/**",
           "/_nuxt/**"
         ],
         "includeAppSources": true
@@ -791,6 +792,29 @@ const _inlineRuntimeConfig = {
           },
           {
             "pattern": "/",
+            "allow": true
+          }
+        ]
+      },
+      {
+        "comment": [],
+        "disallow": [
+          "['/admin', '/api'],"
+        ],
+        "allow": [
+          "'/',"
+        ],
+        "userAgent": [
+          "'*',"
+        ],
+        "_indexable": true,
+        "_rules": [
+          {
+            "pattern": "['/admin', '/api'],",
+            "allow": false
+          },
+          {
+            "pattern": "'/',",
             "allow": true
           }
         ]
@@ -1207,7 +1231,7 @@ const _yf8xY5fbvV72lpWtj4U5IqpRFENqBkrGgzWTlKny6A = (function(nitro) {
 
 const rootDir = "/home/alik3dav/Sprigggy";
 
-const appHead = {"meta":[{"name":"description","content":"Sprigggy: Free, high-quality design assets for creatives."},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"property":"og:type","content":"website"},{"property":"og:site_name","content":"Sprigggy"},{"property":"og:url","content":"https://sprigggy.com"}],"link":[{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap"}],"style":[],"script":[],"noscript":[],"titleTemplate":"%s | Sprigggy"};
+const appHead = {"meta":[{"name":"description","content":"Sprigggy: Free, high-quality design assets for creatives."},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"property":"og:type","content":"website"},{"property":"og:site_name","content":"Sprigggy"},{"property":"og:url","content":"https://sprigggy.com"}],"link":[{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@400;700;800&display=swap"}],"style":[],"script":[],"noscript":[],"titleTemplate":"%s | Sprigggy"};
 
 const appRootTag = "div";
 
@@ -1799,22 +1823,7 @@ _Im0kBAq9_nZ83Bje52ntlKmz_CWSFjOzNj10ps2LvU,
 _5YMo326TAypamiVIhUw4HWM9xIjhecpEKRDgKYUc
 ];
 
-const assets = {
-  "/index.mjs": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"2c6e8-fxcIK5ksQv7lXV3VnWHKl1SUboc\"",
-    "mtime": "2025-07-25T09:58:24.743Z",
-    "size": 181992,
-    "path": "index.mjs"
-  },
-  "/index.mjs.map": {
-    "type": "application/json",
-    "etag": "\"b3296-sBcOXmlIrCUHxNd1G7EWRdHlXQg\"",
-    "mtime": "2025-07-25T09:58:24.744Z",
-    "size": 733846,
-    "path": "index.mjs.map"
-  }
-};
+const assets = {};
 
 function readAsset (id) {
   const serverDir = dirname$1(fileURLToPath(globalThis._importMeta_.url));

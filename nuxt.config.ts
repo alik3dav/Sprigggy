@@ -37,7 +37,6 @@ export default defineNuxtConfig({
       return [];
     },
   },
-
   app: {
     head: {
       titleTemplate: '%s | Sprigggy',
@@ -53,9 +52,10 @@ export default defineNuxtConfig({
         {
           rel: 'stylesheet',
           href:
-            'https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap',
+            'https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@400;700;800&display=swap',
         },
       ],
     },
   },
+  
 });
