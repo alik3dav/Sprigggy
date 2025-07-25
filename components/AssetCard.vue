@@ -16,10 +16,11 @@
 
       <!-- Image -->
       <NuxtLink :to="link" class="block h-full w-full">
-        <img
+        <NuxtImg
           :src="image"
           alt=""
           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          format="webp"
         />
 
         <!-- Title overlay on hover -->

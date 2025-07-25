@@ -2,6 +2,7 @@
 /// <reference types="@nuxtjs/supabase" />
 /// <reference types="@nuxtjs/robots" />
 /// <reference types="@nuxtjs/sitemap" />
+/// <reference types="@nuxt/image" />
 /// <reference types="@nuxt/devtools" />
 /// <reference types="@nuxt/telemetry" />
 /// <reference path="types/builder-env.d.ts" />

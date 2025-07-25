@@ -108,6 +108,7 @@ declare global {
   const useHeadSafe: typeof import('../../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/app/composables/head')['useHeadSafe']
   const useHydration: typeof import('../../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/app/composables/hydrate')['useHydration']
   const useId: typeof import('../../node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue')['useId']
+  const useImage: typeof import('../../node_modules/.pnpm/@nuxt+image@1.10.0/node_modules/@nuxt/image/dist/runtime/composables')['useImage']
   const useLazyAsyncData: typeof import('../../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/app/composables/asyncData')['useLazyAsyncData']
   const useLazyFetch: typeof import('../../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/app/composables/fetch')['useLazyFetch']
   const useLink: typeof import('../../node_modules/.pnpm/vue-router@4.5.1_vue@3.5.17/node_modules/vue-router')['useLink']
@@ -301,6 +302,7 @@ declare module 'vue' {
     readonly useHeadSafe: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/app/composables/head')['useHeadSafe']>
     readonly useHydration: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/app/composables/hydrate')['useHydration']>
     readonly useId: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue')['useId']>
+    readonly useImage: UnwrapRef<typeof import('../../node_modules/.pnpm/@nuxt+image@1.10.0/node_modules/@nuxt/image/dist/runtime/composables')['useImage']>
     readonly useLazyAsyncData: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/app/composables/asyncData')['useLazyAsyncData']>
     readonly useLazyFetch: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/app/composables/fetch')['useLazyFetch']>
     readonly useLink: UnwrapRef<typeof import('../../node_modules/.pnpm/vue-router@4.5.1_vue@3.5.17/node_modules/vue-router')['useLink']>

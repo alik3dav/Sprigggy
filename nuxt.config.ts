@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxtjs/supabase',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
+    '@nuxt/image',
   ],
 
   supabase: {

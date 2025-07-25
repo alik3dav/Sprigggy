@@ -38,5 +38,6 @@ export { useSiteConfig } from '../node_modules/.pnpm/nuxt-site-config@3.2.2_vue@
 export { createSitePathResolver, withSiteTrailingSlash, withSiteUrl } from '../node_modules/.pnpm/nuxt-site-config@3.2.2_vue@3.5.17/node_modules/nuxt-site-config/dist/runtime/app/composables/utils';
 export { useRobotsRule } from '../node_modules/.pnpm/@nuxtjs+robots@5.4.0_vue@3.5.17/node_modules/@nuxtjs/robots/dist/runtime/app/composables/useRobotsRule';
 export { useBotDetection } from '../node_modules/.pnpm/@nuxtjs+robots@5.4.0_vue@3.5.17/node_modules/@nuxtjs/robots/dist/runtime/app/composables/useBotDetection';
+export { useImage } from '../node_modules/.pnpm/@nuxt+image@1.10.0/node_modules/@nuxt/image/dist/runtime/composables';
 export { useNuxtDevTools } from '../node_modules/.pnpm/@nuxt+devtools@2.6.2_vite@7.0.5_vue@3.5.17/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';
 export { definePageMeta } from '../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/pages/runtime/composables';

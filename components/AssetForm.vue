@@ -99,11 +99,12 @@
         class="block w-full text-gray-700"
       />
       <div v-if="uploading" class="text-gray-600 mt-2 italic">Uploading image...</div>
-      <img
+      <NuxtImg
         v-if="localForm.image"
         :src="localForm.image"
         alt="Preview"
         class="mt-3 max-w-full rounded-lg shadow-sm border border-gray-200"
+        format="webp"
       />
     </div>
 
