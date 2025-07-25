@@ -1,9 +1,6 @@
-
+node_modules
 # Ignore environment variables
 .env
 .env.*     # Like .env.local, .env.production, etc.
 
 
-
-# Node modules and logs
-node_modules

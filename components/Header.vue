@@ -1,6 +1,6 @@
 <template>
   <header class="fixed top-0 inset-x-0 z-50 backdrop-blur-lg bg-white bg-opacity-90">
-    <div class="w-full px-24 py-8 mx-auto flex items-center justify-between gap-6">
+    <div class="w-full px-6 sm:px-12 md:px-16 lg:px-24 py-8 mx-auto flex items-center justify-between gap-6">
       <!-- Logo -->
       <NuxtLink to="/" class="flex items-center space-x-2" aria-label="Sprigggy Home">
         <img src="/sprigggy.png" alt="Sprigggy logo" class="w-20 sm:w-24 h-auto" />
