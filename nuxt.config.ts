@@ -58,5 +58,21 @@ export default defineNuxtConfig({
       ],
     },
   },
+  nitro: {
+    routeRules: {
+      // Cache static images (e.g., in /public/images) for 1 year
+      '/images/**': {
+        headers: {
+          'cache-control': 'public, max-age=31536000, immutable'
+        }
+      },
+      // Cache JS/CSS chunks aggressively
+      '/_nuxt/**': {
+        headers: {
+          'cache-control': 'public, max-age=31536000, immutable'
+        }
+      }
+    }
+  }
   
 });

@@ -638,6 +638,18 @@ const _inlineRuntimeConfig = {
       "/__nuxt_error": {
         "cache": false
       },
+      "/images/**": {
+        "headers": {
+          "cache-control": "public, max-age=31536000, immutable"
+        }
+      },
+      "/_nuxt/**": {
+        "headers": {
+          "cache-control": "public, max-age=31536000, immutable",
+          "X-Robots-Tag": "noindex"
+        },
+        "robots": "noindex"
+      },
       "/__sitemap__/style.xsl": {
         "headers": {
           "Content-Type": "application/xslt+xml"
@@ -645,12 +657,6 @@ const _inlineRuntimeConfig = {
       },
       "/sitemap.xml": {},
       "/_nuxt": {
-        "robots": "noindex",
-        "headers": {
-          "X-Robots-Tag": "noindex"
-        }
-      },
-      "/_nuxt/**": {
         "robots": "noindex",
         "headers": {
           "X-Robots-Tag": "noindex"
