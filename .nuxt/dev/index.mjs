@@ -739,7 +739,6 @@ const _inlineRuntimeConfig = {
         "include": [],
         "exclude": [
           "/_**",
-          "/_nuxt/**",
           "/_nuxt/**"
         ],
         "includeAppSources": true
@@ -793,29 +792,6 @@ const _inlineRuntimeConfig = {
           },
           {
             "pattern": "/",
-            "allow": true
-          }
-        ]
-      },
-      {
-        "comment": [],
-        "disallow": [
-          "['/admin', '/api'],"
-        ],
-        "allow": [
-          "'/',"
-        ],
-        "userAgent": [
-          "'*',"
-        ],
-        "_indexable": true,
-        "_rules": [
-          {
-            "pattern": "['/admin', '/api'],",
-            "allow": false
-          },
-          {
-            "pattern": "'/',",
             "allow": true
           }
         ]
