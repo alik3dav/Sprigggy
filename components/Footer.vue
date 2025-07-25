@@ -1,13 +1,12 @@
 <template>
   <footer class="w-full mt-24 bg-white border-t border-zinc-200 text-gray-700 text-sm">
-    <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class=" w-full px-24 mx-auto py-12 flex flex-col md:flex-row items-center justify-between gap-6">
       <!-- Left: Copyright -->
       <div class="text-center md:text-left text-gray-400 font-light tracking-wide select-none">
         © {{ new Date().getFullYear() }} Sprigggy. All rights reserved.
       </div>
 
-      <!-- Middle: Stats (Optional block, clean integration) -->
-      <StatsWidget />
+
 
       <!-- Right: Links -->
       <nav class="flex gap-6 text-gray-500 font-medium">
@@ -28,6 +27,3 @@
   </footer>
 </template>
 
-<script setup>
-import StatsWidget from '@/components/StatsWidget.vue'
-</script>

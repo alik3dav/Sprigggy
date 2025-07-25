@@ -63,8 +63,8 @@ const clearSearch = () => {
     v-model="searchTerm"
     type="search"
     placeholder="Search assets..."
-    class="w-full px-4 py-3 pl-4 pr-10 text-sm bg-slate-50 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600 placeholder-gray-400 transition"
-    autocomplete="off"
+    class="w-full px-6 py-4 pl-6 pr-10 text-sm bg-slate-50 rounded-full  focus:outline-none focus:ring-2 focus:ring-blue-600 placeholder-gray-400 transition"
+    autocomplete="on"
   />
 
   <!-- Clear button -->

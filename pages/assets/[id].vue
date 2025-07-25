@@ -140,11 +140,11 @@ watch(asset, (val) => {
 <template>
   <div class="max-w-6xl mt-24 mx-auto p-4 space-y-8">
     <div
-      class="border border-slate-100 rounded-lg p-8 grid grid-cols-1 lg:grid-cols-3 gap-10"
+      class="p-8 grid grid-cols-1 lg:grid-cols-3 gap-10"
     >
       <!-- Left Column: Image + Description -->
       <div class="lg:col-span-2 space-y-6">
-        <div v-if="asset?.image" class="rounded overflow-hidden">
+        <div v-if="asset?.image" class="rounded-2xl overflow-hidden">
           <img
             :src="asset.image"
             :alt="asset.title"
@@ -157,10 +157,10 @@ watch(asset, (val) => {
           {{ asset?.title }}
         </h1>
 
-        <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500">
+        <div class="flex items-center gap-2">
           <span
             v-if="asset?.type"
-            class="inline-block bg-slate-100 rounded-full px-3 py-2 font-medium"
+            class="bg-gray-100 rounded-full px-4 py-1"
           >
             {{ asset.type }}
           </span>
@@ -169,7 +169,7 @@ watch(asset, (val) => {
             <span
               v-for="tag in asset.tags"
               :key="tag"
-              class="inline-block bg-blue-100 text-blue-700 rounded-full px-3 py-2 font-semibold"
+              class="bg-blue-100 text-blue-700 rounded-full px-4 py-1"
             >
               {{ tag }}
             </span>
@@ -185,7 +185,7 @@ watch(asset, (val) => {
 
       <!-- Right Sidebar: Download, Info & Related -->
       <aside
-        class="lg:col-span-1 sticky top-18 self-start space-y-6  bg-slate-100  rounded-3xl p-4 "
+        class="lg:col-span-1 sticky top-18 self-start space-y-6  bg-slate-50  rounded-3xl p-8 "
       >
         <div>
           <a

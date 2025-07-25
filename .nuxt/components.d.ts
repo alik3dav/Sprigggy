@@ -23,7 +23,6 @@ interface _GlobalComponents {
     'LogoutButton': typeof import("../components/LogoutButton.vue")['default']
     'ProviderIcon': typeof import("../components/ProviderIcon.vue")['default']
     'SearchAssets': typeof import("../components/SearchAssets.vue")['default']
-    'StatsWidget': typeof import("../components/StatsWidget.vue")['default']
     'ToastEditor': typeof import("../components/ToastEditor.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/app/components/welcome.vue")['default']
     'NuxtLayout': typeof import("../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -60,7 +59,6 @@ interface _GlobalComponents {
     'LazyLogoutButton': LazyComponent<typeof import("../components/LogoutButton.vue")['default']>
     'LazyProviderIcon': LazyComponent<typeof import("../components/ProviderIcon.vue")['default']>
     'LazySearchAssets': LazyComponent<typeof import("../components/SearchAssets.vue")['default']>
-    'LazyStatsWidget': LazyComponent<typeof import("../components/StatsWidget.vue")['default']>
     'LazyToastEditor': LazyComponent<typeof import("../components/ToastEditor.vue")['default']>
     'LazyNuxtWelcome': LazyComponent<typeof import("../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/app/components/welcome.vue")['default']>
     'LazyNuxtLayout': LazyComponent<typeof import("../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
@@ -103,7 +101,6 @@ export const Hero: typeof import("../components/Hero.vue")['default']
 export const LogoutButton: typeof import("../components/LogoutButton.vue")['default']
 export const ProviderIcon: typeof import("../components/ProviderIcon.vue")['default']
 export const SearchAssets: typeof import("../components/SearchAssets.vue")['default']
-export const StatsWidget: typeof import("../components/StatsWidget.vue")['default']
 export const ToastEditor: typeof import("../components/ToastEditor.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -140,7 +137,6 @@ export const LazyHero: LazyComponent<typeof import("../components/Hero.vue")['de
 export const LazyLogoutButton: LazyComponent<typeof import("../components/LogoutButton.vue")['default']>
 export const LazyProviderIcon: LazyComponent<typeof import("../components/ProviderIcon.vue")['default']>
 export const LazySearchAssets: LazyComponent<typeof import("../components/SearchAssets.vue")['default']>
-export const LazyStatsWidget: LazyComponent<typeof import("../components/StatsWidget.vue")['default']>
 export const LazyToastEditor: LazyComponent<typeof import("../components/ToastEditor.vue")['default']>
 export const LazyNuxtWelcome: LazyComponent<typeof import("../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/app/components/welcome.vue")['default']>
 export const LazyNuxtLayout: LazyComponent<typeof import("../node_modules/.pnpm/nuxt@3.17.7_@vue+compiler-sfc@3.5.17_typescript@5.8.3_vite@7.0.5/node_modules/nuxt/dist/app/components/nuxt-layout")['default']>

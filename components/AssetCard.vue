@@ -10,15 +10,16 @@
 
         <!-- Title overlay on hover -->
         <div
-          class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 py-3"
-        >
-          <h3
-            class="text-white font-medium text-base truncate"
-            :title="title"
-          >
-            {{ title }}
-          </h3>
-        </div>
+  class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 py-6"
+>
+  <h3
+    class="text-white font-medium text-base truncate mt-8"
+    :title="title"
+  >
+    {{ title }}
+  </h3>
+</div>
+
       </NuxtLink>
     </div>
 
