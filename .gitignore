@@ -1,1 +1,19 @@
 node_modules
+# Ignore environment variables
+.env
+.env.*     # Like .env.local, .env.production, etc.
+
+# Optional: ignore Nuxt build output
+.nuxt
+output
+dist
+
+# Node modules and logs
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VS Code and OS clutter (optional but helpful)
+.vscode
+.DS_Store
