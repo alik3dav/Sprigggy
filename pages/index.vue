@@ -34,7 +34,7 @@
         HDRI Maps
       </h2>
       <p class="text-gray-600 text-lg max-w-md">
-        Explore our curated selection of high-quality HDRI maps, perfect for lighting your 3D scenes with stunning realism.
+        Explore our curated selection of high-quality HDRI maps, perfect for lighting your 3D scenes with stunning realism!
       </p>
       <NuxtLink
         to="/collections"
